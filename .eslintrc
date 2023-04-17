@@ -1,0 +1,53 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb",
+    "airbnb-typescript"
+  ],
+
+  "parserOptions": {
+    "requireConfigFile": false,
+    "project": "./tsconfig.json"
+  },
+
+  "rules": {
+    "linebreak-style": "off",
+    "@typescript-eslint/lines-between-class-members": "off",
+    "react/jsx-no-constructed-context-values": "off",
+    "react/require-default-props": "off",
+    "react/destructuring-assignment": "off",
+    "react/prop-types": "off",
+    "react/function-component-definition": "off",
+    "react/no-unescaped-entities": "off",
+    "react/prefer-stateless-function": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "max-classes-per-file": "off",
+    "class-methods-use-this": "off",
+    "consistent-return": "off",
+    "arrow-body-style": "off",
+    "no-new": "off",
+    "no-restricted-syntax": "off",
+    "no-await-in-loop": "off",
+    "no-param-reassign": "off",
+    "no-nested-ternary": "off",
+    "no-return-assign": "off",
+    "no-plusplus": "off",
+    "no-console": "warn",
+    "max-len": "off",
+    "quotes": ["warn", "single"],
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "import/no-cycle": "off",
+    "import/extensions": [
+      "error",
+      {
+        "js": "ignorePackages"
+      }
+    ]
+  }
+}
