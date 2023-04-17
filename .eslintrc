@@ -13,7 +13,6 @@
     "requireConfigFile": false,
     "project": "./tsconfig.json"
   },
-
   "rules": {
     "linebreak-style": "off",
     "@typescript-eslint/lines-between-class-members": "off",
