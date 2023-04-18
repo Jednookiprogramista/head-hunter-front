@@ -1,5 +1,10 @@
 import React, {
-  createContext, Dispatch, ReactNode, SetStateAction, useEffect, useState,
+  createContext,
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  useEffect,
+  useState,
 } from 'react';
 
 interface State {
@@ -7,10 +12,12 @@ interface State {
   accessToken: string;
 }
 
-export const AuthContext = createContext<{ auth: State | null, setAuth: Dispatch<SetStateAction<State | null>> }>({
+export const AuthContext = createContext<{
+  auth: State | null;
+  setAuth: Dispatch<SetStateAction<State | null>>;
+}>({
   auth: null,
-  setAuth: () => {
-  },
+  setAuth: () => {},
 });
 
 interface Props {
@@ -30,7 +37,7 @@ export const AuthProvider = ({ children }: Props) => {
 
   return (
     <AuthContext.Provider value={{ auth, setAuth }}>
-      { children }
+      {children}
     </AuthContext.Provider>
   );
 };

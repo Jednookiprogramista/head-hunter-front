@@ -43,5 +43,5 @@ export const AxiosExampleUsage = () => {
 
   if (userData === null) return <p>Czekaj...</p>;
 
-  return (<h1>{userData}</h1>);
+  return <h1>{userData}</h1>;
 };

@@ -4,16 +4,16 @@
     "node": true
   },
   "parser": "@typescript-eslint/parser",
-  "extends": [
-    "airbnb",
-    "airbnb-typescript",
-    "plugin:prettier/recommended"
+  "extends": ["airbnb", "airbnb-typescript", "plugin:prettier/recommended"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "requireConfigFile": false,
+        "project": "./tsconfig.json"
+      }
+    }
   ],
-
-  "parserOptions": {
-    "requireConfigFile": false,
-    "project": "./tsconfig.json"
-  },
   "rules": {
     "linebreak-style": "off",
     "@typescript-eslint/lines-between-class-members": "off",

@@ -2,9 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "types": [
-        "../megak_project_back/types"
-      ]
+      "types": ["../head-hunter-backend/types"]
     }
   }
 }

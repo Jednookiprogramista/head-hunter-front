@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import {
-  AxiosError, AxiosInstance, AxiosResponse, InternalAxiosRequestConfig,
+  AxiosError,
+  AxiosInstance,
+  AxiosResponse,
+  InternalAxiosRequestConfig,
 } from 'axios';
 
 import { useRefresh } from './useRefresh';

@@ -1,11 +1,20 @@
 import { useEffect, useState } from 'react';
 
 const ISO_MAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,63}$/;
-const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[?!@#$%]).{8,100}$/;
+const PASSWORD_REGEX =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[?!@#$%]).{8,100}$/;
 
 export const useUserValidation = ({
-  email, password, passwordRepetition, emailRepetition,
-}: { email?: string, password?: string, passwordRepetition?: string, emailRepetition?: string }) => {
+  email,
+  password,
+  passwordRepetition,
+  emailRepetition,
+}: {
+  email?: string;
+  password?: string;
+  passwordRepetition?: string;
+  emailRepetition?: string;
+}) => {
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const [passwordRepetitionError, setPasswordRepetitionError] = useState(false);
@@ -35,6 +44,9 @@ export const useUserValidation = ({
   }, [email, password, passwordRepetition, emailRepetition]);
 
   return {
-    emailError, passwordError, passwordRepetitionError, emailRepetitionError,
+    emailError,
+    passwordError,
+    passwordRepetitionError,
+    emailRepetitionError,
   };
 };
