@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Catamaran';
+    src: url('./fonts/Catamaran-Variable.ttf') format('truetype');
+    font-weight: 300 900;
+    font-display: swap;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Catamaran, sans-serif;
+    font-size: 16px;
+    color: #F7F7F7;
+    margin: 0;
+    line-height: 1.5;
+    background-color: #222224;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+.primary-btn {
+    background-color: #e02735;
+    color: #f7f7f7;
+    padding: 6px 8px;
+}
