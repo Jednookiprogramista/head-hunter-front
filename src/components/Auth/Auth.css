@@ -1,0 +1,44 @@
+.Auth__form {
+    margin: 100px auto;
+    border: none;
+    width: 20%;
+    min-width: 300px;
+}
+.Auth__form .MuiFormControl-root{
+    margin: .2rem 0;
+}
+.Auth__form a{
+    color: white;
+}
+.Auth__form .forgot-pass a{
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    margin: .5rem 0;
+    text-decoration: none;
+}
+.Auth__form input {
+    color: #9f9f9f;
+    background-color: #292a2b;
+    border: none;
+}
+.Auth__form label{
+    color: #7e7e7e;
+}
+.Auth__form button{
+    background-color: #e02735;
+    text-transform: none;
+    border: none;
+    width: 30%;
+    min-width: 100px;
+    margin: 0;
+    padding: .3rem .2rem;
+    border-radius: 0;
+}
+.Auth__form button:disabled{
+    background-color: #9f9f9f;
+    color: #000000;
+}
+.Auth__form button:hover{
+    background-color: #de4853;
+}
