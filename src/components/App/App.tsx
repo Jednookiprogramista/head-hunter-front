@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-
 import { AuthProvider } from '../../context/AuthProvider';
 import { Auth } from '../Auth/Auth';
+import { Button } from '../Button/Button';
 import { List } from '../layout/list/List';
 // import { RequireAuth } from '../RequireAuth/RequireAuth';
 
@@ -13,7 +13,6 @@ export const App = () => {
         <Route path="login" element={<Auth />} />
         <Route path="register" element={<Auth />} />
 
-      
         <Route path="list" element={<List />} />
 
         <Route
@@ -21,9 +20,7 @@ export const App = () => {
           element={
             <>
               <h1>MegaK - projekt finałowy</h1>
-              <button type="button" className="primary-btn">
-                Zaloguj się
-              </button>
+              <Button>Zaloguj się</Button>
             </>
           }
         />
