@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { PrimaryButton } from '../Button/PrimaryButton';
 import { FilterModal } from '../FilterModal/FilterModal';
+import { SecondaryButton } from '../Button/SecondaryButton';
+import { StudentList } from './StudentList/StudentList';
 
 export const StudentsListView = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -8,9 +9,12 @@ export const StudentsListView = () => {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
-      <PrimaryButton onClick={handleOpen}>Filtruj</PrimaryButton>
+    <>
+      <div>
+        <SecondaryButton onClick={handleOpen}>Filtrowanie</SecondaryButton>
+        <StudentList />
+      </div>
       <FilterModal isOpen={open} onCancel={handleClose} />
-    </div>
+    </>
   );
 };
