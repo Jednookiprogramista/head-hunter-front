@@ -1,3 +1,5 @@
+
+
 @font-face {
   font-family: 'Catamaran';
   src: url('./fonts/Catamaran-Variable.ttf') format('truetype');
@@ -49,4 +51,5 @@ select {
   background-color: #e02735;
   color: #f7f7f7;
   padding: 6px 8px;
+
 }
