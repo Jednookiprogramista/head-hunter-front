@@ -44,9 +44,3 @@ textarea,
 select {
   font: inherit;
 }
-
-.primary-btn {
-  background-color: #e02735;
-  color: #f7f7f7;
-  padding: 6px 8px;
-}

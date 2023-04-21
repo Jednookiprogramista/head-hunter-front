@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-
 import { AuthProvider } from '../../context/AuthProvider';
 import { Auth } from '../Auth/Auth';
+import { Button } from '../Button/Button';
 // import { RequireAuth } from '../RequireAuth/RequireAuth';
 
 export const App = () => {
@@ -16,9 +16,7 @@ export const App = () => {
           element={
             <>
               <h1>MegaK - projekt finałowy</h1>
-              <button type="button" className="primary-btn">
-                Zaloguj się
-              </button>
+              <Button>Zaloguj się</Button>
             </>
           }
         />

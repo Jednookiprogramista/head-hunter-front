@@ -26,6 +26,8 @@
     "react/prefer-stateless-function": "off",
     "react/jsx-filename-extension": "off",
     "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
     "max-classes-per-file": "off",
     "class-methods-use-this": "off",
     "consistent-return": "off",
@@ -50,7 +52,7 @@
       }
     ],
     "prettier/prettier": [
-      "error",
+      "warn",
       {
         "endOfLine": "auto"
       }
