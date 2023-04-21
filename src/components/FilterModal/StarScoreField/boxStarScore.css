@@ -1,0 +1,14 @@
+.box-star-score-container {
+    background-color: #292A2B;
+    color: #f7f7f7;
+    padding: 4px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.selected {
+    color: #f7f7f7;
+    background-color: #e02735;
+}

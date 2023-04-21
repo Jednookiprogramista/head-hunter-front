@@ -1,13 +1,13 @@
-import { Box, Dialog, DialogActions, DialogContent } from '@mui/material';
+import { Dialog, DialogActions, DialogContent } from '@mui/material';
 import { PrimaryButton } from '../Button/PrimaryButton';
-import { TextButton } from '../Button/TextButton';
 import { SecondaryButton } from '../Button/SecondaryButton';
-import { BoxScore } from './BoxScore';
+import { TextButton } from '../Button/TextButton';
+import { StarsScoreField } from './StarScoreField/StarsScoreField';
+import './filterModal.css';
 
 type FilterModalProps = {
   isOpen: boolean;
   onCancel: () => void;
-  //   onConfirm: () => void;
 };
 
 export const FilterModal = ({ isOpen, onCancel }: FilterModalProps) => {
@@ -16,41 +16,21 @@ export const FilterModal = ({ isOpen, onCancel }: FilterModalProps) => {
   };
 
   return (
-    <Dialog open={isOpen} onClose={handleClose} maxWidth={false}>
-      <div style={{ width: '520px', height: '806px', display: 'flex' }}>
-        <DialogContent
-          style={{
-            backgroundColor: '#0A0A0A',
-            color: '#f7f7f7',
-            fontSize: '14px',
-            width: '100%',
-          }}
-        >
-          <Box
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              width: '100%',
-              fontSize: '22px',
-              fontWeight: 'bold',
-              margin: '5px 0',
-            }}
-          >
+    <Dialog open={isOpen} onClose={handleClose}>
+      <div className="dialog-container">
+        <DialogContent className="dialog-content">
+          <div className="dialog-header">
             Filtrowanie
             <SecondaryButton>Wyczyść wszystkie</SecondaryButton>
-          </Box>
-          <Box
-            sx={{
-              margin: '20px 0 5px 0',
-            }}
-          >
-            Ocena przejścia kursu
-          </Box>
-          <BoxScore>5</BoxScore> <BoxScore>4</BoxScore>
-          <BoxScore>3</BoxScore> <BoxScore>2</BoxScore> <BoxScore>1</BoxScore>
+          </div>
+          <StarsScoreField title="Ocena przejścia kursu" />
+          <StarsScoreField title="Ocena aktywności i zaangażowania na kursie" />
+          <StarsScoreField title="Ocena kodu w projekcie własnym" />
+          <StarsScoreField title="Ocena pracy w zespole w Scrum" />
         </DialogContent>
         <DialogActions
-          style={{ justifyContent: 'center', backgroundColor: '#0A0A0A' }}
+          className="dialog-actions"
+          style={{ padding: '20px 24px' }}
         >
           <TextButton onClick={handleClose}>Anuluj</TextButton>
           <PrimaryButton>Pokaż wyniki</PrimaryButton>
