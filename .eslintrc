@@ -48,6 +48,12 @@
       {
         "js": "ignorePackages"
       }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
     ]
   }
 }
