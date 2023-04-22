@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import { AuthProvider } from '../../context/AuthProvider';
 import { Auth } from '../Auth/Auth';
+import { List } from '../layout/list/List';
 // import { RequireAuth } from '../RequireAuth/RequireAuth';
 
 export const App = () => {
@@ -11,6 +12,8 @@ export const App = () => {
       <Routes>
         <Route path="login" element={<Auth />} />
         <Route path="register" element={<Auth />} />
+        <Route path="list" element={<List />} />
+
         <Route
           path="/"
           element={
