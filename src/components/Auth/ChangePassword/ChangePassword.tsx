@@ -95,7 +95,9 @@ export const ChangePassword = () => {
       <div className="Auth__button-container">
         {!success && (
           <Typography variant="body2" className="redirect-paraph">
-            Posiadasz już konto? <Link to="/login">Zaloguj się</Link>
+            Nie chcesz zmieniać hasła?
+            <br />
+            <Link to="/login">Zaloguj się</Link>
           </Typography>
         )}
         {success && (
