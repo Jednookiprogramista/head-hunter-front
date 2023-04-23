@@ -1,8 +1,10 @@
 import React, { FormEvent, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Button, TextField, Typography } from '@mui/material';
+import { TextField, Typography } from '@mui/material';
 import { axiosPrivate } from '../../../api/axios';
 import { useAuth } from '../../../hooks/useAuth';
+import { Button } from '../../Button/Button';
+
 import '../Auth.css';
 
 export const Login = () => {
@@ -52,6 +54,11 @@ export const Login = () => {
 
   return (
     <form className="Auth__form" onSubmit={handleSubmit}>
+      <img
+        src="https://static1.s123-cdn-static-a.com/uploads/5191798/400_609bb5e2d9a39.png"
+        className="logo_header"
+        alt="MegaK"
+      />
       <TextField
         label="E-mail"
         type="email"
@@ -71,24 +78,21 @@ export const Login = () => {
         fullWidth
       />
       <Typography variant="body2" className="forgot-pass">
-        <Link to="/register">Zapomniałeś hasła?</Link>
+        <Link to="/pass-recover">Zapomniałeś hasła?</Link>
       </Typography>
-      <Button
-        type="submit"
-        variant="contained"
-        disabled={!email || !password || !!error}
-        fullWidth
-      >
-        Zaloguj się
-      </Button>
+      <div className="Auth__button-container">
+        <Typography variant="body2" className="redirect-paraph">
+          Nie masz konta? <Link to="/register">Zarejestruj się</Link>
+        </Typography>
+        <Button type="submit" disabled={!email || !password || !!error}>
+          Zaloguj się
+        </Button>
+      </div>
       {error && (
         <Typography variant="body2" color="error" gutterBottom>
           {error}
         </Typography>
       )}
-      <Typography variant="body2" className="redirect-paraph">
-        Nie masz konta? <Link to="/register">Zarejestruj się</Link>
-      </Typography>
     </form>
   );
 };

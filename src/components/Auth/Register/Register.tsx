@@ -1,8 +1,12 @@
 import React, { FormEvent, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, TextField, Typography } from '@mui/material';
+import { TextField, Typography } from '@mui/material';
+
 import { useUserValidation } from '../../../hooks/useRegisterValidation';
 import { axios } from '../../../api/axios';
+import { Button } from '../../Button/Button';
+
+import '../Auth.css';
 
 export const Register = () => {
   const [loading, setLoading] = useState(false);
@@ -60,18 +64,22 @@ export const Register = () => {
     }
   };
 
-  if (loading) return <p>ładowanie</p>;
+  if (loading) return <p>Ładowanie</p>;
 
   return (
     <form className="Auth__form" onSubmit={handleSubmit}>
-      <h2>Zarejestruj się</h2>
+      <img
+        src="https://static1.s123-cdn-static-a.com/uploads/5191798/400_609bb5e2d9a39.png"
+        className="logo_header"
+        alt="MegaK"
+      />
       <TextField
-        label="Adres email"
+        label="Adres e-mail"
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         error={emailError}
-        helperText={emailError}
+        helperText={emailError && 'Podany adres e-mail jest nieprawidłowy.'}
         required
         fullWidth
         margin="normal"
@@ -82,7 +90,10 @@ export const Register = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         error={passwordError}
-        helperText={passwordError}
+        helperText={
+          passwordError &&
+          'Hasło musi zawierać conajmniej 8 znaków, w tym jedną zwykłą literę, dużą literę, cyfrę oraz któryś ze znaków specjalnych - "?", "!", "@", "#", "$", "%"'
+        }
         required
         fullWidth
         margin="normal"
@@ -93,27 +104,41 @@ export const Register = () => {
         value={passwordRepetition}
         onChange={(e) => setPasswordRepetition(e.target.value)}
         error={passwordRepetitionError}
-        helperText={passwordRepetitionError}
+        helperText={passwordRepetitionError && 'Podane hasła nie są jednakowe.'}
         required
         fullWidth
         margin="normal"
       />
-      <Button
-        type="submit"
-        variant="contained"
-        disabled={!email || !password || !passwordRepetition || !!error}
-        fullWidth
-      >
-        Zarejestruj się
-      </Button>
+      <div className="Auth__button-container">
+        {!success && (
+          <Typography variant="body2" className="redirect-paraph">
+            Posiadasz już konto? <Link to="/login">Zaloguj się</Link>
+          </Typography>
+        )}
+        {success && (
+          <Typography variant="body2" className="redirect-paraph">
+            Konto zostało utworzone <Link to="/login">Zaloguj się</Link>
+          </Typography>
+        )}
+        <Button
+          type="submit"
+          disabled={
+            !email ||
+            !password ||
+            !!error ||
+            emailError ||
+            passwordError ||
+            passwordRepetitionError
+          }
+        >
+          Zarejestruj się
+        </Button>
+      </div>
       {error && (
         <Typography variant="body2" color="error" gutterBottom>
           {error}
         </Typography>
       )}
-      <Typography variant="body2" className="redirect-paraph">
-        Posiadasz już konto? <Link to="/login">Zaloguj się</Link>
-      </Typography>
     </form>
   );
 };
