@@ -3,17 +3,20 @@ import {
   ButtonProps as MuiButtonProps,
 } from '@mui/material';
 
-type ButtonProps = MuiButtonProps;
+type SecondaryButtonProps = MuiButtonProps;
 
-export const Button = ({ children, ...buttonProps }: ButtonProps) => {
+export const SecondaryButton = ({
+  children,
+  ...buttonProps
+}: SecondaryButtonProps) => {
   return (
     <MuiButton
       variant="contained"
       sx={{
-        ':hover': { backgroundColor: '#d12332' },
-        backgroundColor: '#e02735',
+        ':hover': { backgroundColor: '#13232d' },
+        backgroundColor: '#172A35',
         color: '#f7f7f7',
-        padding: '6px 10px',
+        padding: '4px 10px',
         fontFamily: 'Catamaran',
         fontWeight: 'regular',
         fontSize: '16px',
