@@ -16,11 +16,7 @@
 }
 
 html,
-body {
-  height: 100%;
-}
 
-body {
   font-family: Catamaran, sans-serif;
   font-size: 16px;
   color: #f7f7f7;
@@ -36,6 +32,7 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
+
 }
 
 input,
@@ -43,10 +40,4 @@ button,
 textarea,
 select {
   font: inherit;
-}
-
-.primary-btn {
-  background-color: #e02735;
-  color: #f7f7f7;
-  padding: 6px 8px;
 }
