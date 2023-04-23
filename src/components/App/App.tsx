@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from '../../context/AuthProvider';
 import { Auth } from '../Auth/Auth';
 import { Button } from '../Button/Button';
@@ -12,15 +12,16 @@ export const App = () => {
       <Routes>
         <Route path="login" element={<Auth />} />
         <Route path="register" element={<Auth />} />
-
+        <Route path="pass-recover" element={<Auth />} />
         <Route path="list" element={<List />} />
-
         <Route
           path="/"
           element={
             <>
               <h1>MegaK - projekt finałowy</h1>
-              <Button>Zaloguj się</Button>
+              <Button>
+                <Link to="/login">Zaloguj się</Link>
+              </Button>
             </>
           }
         />
