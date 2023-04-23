@@ -1,44 +1,76 @@
 .Auth__form {
-    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    margin: 0 auto;
     border: none;
     width: 20%;
-    min-width: 300px;
+    min-width: 350px;
 }
+
 .Auth__form .MuiFormControl-root{
     margin: .2rem 0;
 }
+
+.Auth__form img {
+    margin: 1rem auto;
+}
+
 .Auth__form a{
     color: white;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
 }
+
 .Auth__form .forgot-pass a{
     display: inline-block;
+    font-weight: normal;
     width: 100%;
     text-align: right;
     margin: .5rem 0;
     text-decoration: none;
 }
+
 .Auth__form input {
     color: #9f9f9f;
     background-color: #292a2b;
     border: none;
 }
+
 .Auth__form label{
     color: #7e7e7e;
 }
+
+.Auth__button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+}
+
 .Auth__form button{
     background-color: #e02735;
     text-transform: none;
     border: none;
     width: 30%;
-    min-width: 100px;
+    min-width: 110px;
     margin: 0;
     padding: .3rem .2rem;
     border-radius: 0;
 }
+
 .Auth__form button:disabled{
     background-color: #9f9f9f;
     color: #000000;
 }
+
 .Auth__form button:hover{
     background-color: #de4853;
+}
+
+.Auth__form .pass-recover-info{
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
 }
