@@ -6,6 +6,7 @@ import { useAuth } from '../../../hooks/useAuth';
 import { Button } from '../../Button/Button';
 
 import '../Auth.css';
+import { useUserValidation } from '../../../hooks/useRegisterValidation';
 
 export const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -17,6 +18,7 @@ export const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = (location?.state as { from: string })?.from || '/';
+  const { emailError } = useUserValidation({ email });
 
   useEffect(() => {
     setError('');
@@ -31,7 +33,7 @@ export const Login = () => {
   const handleSubmit = async (e: FormEvent) => {
     try {
       e.preventDefault();
-      if (!email || !password) {
+      if (!email || !password || emailError) {
         return;
       }
       setLoading(true);
@@ -64,6 +66,8 @@ export const Login = () => {
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        error={emailError}
+        helperText={emailError && 'Podany adres e-mail jest nieprawidłowy.'}
         required
         margin="normal"
         fullWidth
@@ -84,7 +88,10 @@ export const Login = () => {
         <Typography variant="body2" className="redirect-paraph">
           Nie masz konta? <Link to="/register">Zarejestruj się</Link>
         </Typography>
-        <Button type="submit" disabled={!email || !password || !!error}>
+        <Button
+          type="submit"
+          disabled={!email || !password || !!error || emailError}
+        >
           Zaloguj się
         </Button>
       </div>
