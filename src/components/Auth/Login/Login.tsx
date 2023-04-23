@@ -37,7 +37,7 @@ export const Login = () => {
         return;
       }
       setLoading(true);
-      const { data } = (await axiosPrivate.post('session', {
+      const { data } = (await axiosPrivate.post('auth/signin', {
         email,
         password,
       })) as { data: { id: string; accessToken: string } };

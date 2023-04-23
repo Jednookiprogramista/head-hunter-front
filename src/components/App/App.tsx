@@ -12,6 +12,7 @@ export const App = () => {
       <Routes>
         <Route path="login" element={<Auth />} />
         <Route path="register" element={<Auth />} />
+        <Route path="pass-recover" element={<Auth />} />
         <Route
           path="list"
           element={

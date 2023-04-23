@@ -33,7 +33,7 @@ export const PasswordRecover = () => {
         return;
       }
       setLoading(true);
-      await axiosPrivate.post('user/recover', {
+      await axiosPrivate.post('auth/recover', {
         email,
       });
       setLoading(false);

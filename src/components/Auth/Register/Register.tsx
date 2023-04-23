@@ -43,7 +43,7 @@ export const Register = () => {
         return;
       }
       setLoading(true);
-      await axios.post('user', { email, password });
+      await axios.post('auth/signup', { email, password });
       setError('');
       setPassword('');
       setPasswordRepetition('');
