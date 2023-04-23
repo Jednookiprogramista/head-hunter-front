@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { TextField, Typography } from '@mui/material';
 import { axiosPrivate } from '../../../api/axios';
 import { useAuth } from '../../../hooks/useAuth';
-import { Button } from '../../Button/Button';
+import { PrimaryButton } from '../../Button/PrimaryButton';
 
 import '../Auth.css';
 import { useUserValidation } from '../../../hooks/useRegisterValidation';
@@ -88,12 +88,12 @@ export const Login = () => {
         <Typography variant="body2" className="redirect-paraph">
           Nie masz konta? <Link to="/register">Zarejestruj się</Link>
         </Typography>
-        <Button
+        <PrimaryButton
           type="submit"
           disabled={!email || !password || !!error || emailError}
         >
           Zaloguj się
-        </Button>
+        </PrimaryButton>
       </div>
       {error && (
         <Typography variant="body2" color="error" gutterBottom>

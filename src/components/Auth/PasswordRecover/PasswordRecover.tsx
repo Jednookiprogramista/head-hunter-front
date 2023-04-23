@@ -4,7 +4,7 @@ import { TextField, Typography } from '@mui/material';
 
 import { useUserValidation } from '../../../hooks/useRegisterValidation';
 import { axiosPrivate } from '../../../api/axios';
-import { Button } from '../../Button/Button';
+import { PrimaryButton } from '../../Button/PrimaryButton';
 
 import '../Auth.css';
 
@@ -82,9 +82,9 @@ export const PasswordRecover = () => {
             <Link to="/login">Zaloguj się</Link>
           </Typography>
         )}
-        <Button type="submit" disabled={!email || !!error || emailError}>
+        <PrimaryButton type="submit" disabled={!email || !!error || emailError}>
           Wyślij
-        </Button>
+        </PrimaryButton>
       </div>
       {error && (
         <Typography variant="body2" color="error" gutterBottom>

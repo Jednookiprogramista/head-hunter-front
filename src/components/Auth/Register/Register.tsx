@@ -4,7 +4,7 @@ import { TextField, Typography } from '@mui/material';
 
 import { useUserValidation } from '../../../hooks/useRegisterValidation';
 import { axios } from '../../../api/axios';
-import { Button } from '../../Button/Button';
+import { PrimaryButton } from '../../Button/PrimaryButton';
 
 import '../Auth.css';
 
@@ -120,7 +120,7 @@ export const Register = () => {
             Konto zostało utworzone <Link to="/login">Zaloguj się</Link>
           </Typography>
         )}
-        <Button
+        <PrimaryButton
           type="submit"
           disabled={
             !email ||
@@ -132,7 +132,7 @@ export const Register = () => {
           }
         >
           Zarejestruj się
-        </Button>
+        </PrimaryButton>
       </div>
       {error && (
         <Typography variant="body2" color="error" gutterBottom>
