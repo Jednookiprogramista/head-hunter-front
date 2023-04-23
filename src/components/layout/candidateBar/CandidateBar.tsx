@@ -2,9 +2,9 @@ import React from 'react';
 import './candidateBar.css';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-export const countCandidateBars = () => {
-  const candidateBars = document.querySelectorAll('.candidate-bar');
-  return candidateBars.length;
+export const countCandidateDivBars = () => {
+  const divs = document.querySelectorAll('.candidate-bar');
+  return divs.length;
 };
 
 export const CandidateBar = () => {
