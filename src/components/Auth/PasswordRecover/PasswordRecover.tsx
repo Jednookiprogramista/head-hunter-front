@@ -33,13 +33,11 @@ export const PasswordRecover = () => {
         return;
       }
       setLoading(true);
-      await axiosPrivate.post('auth/recover', {
-        email,
-      });
+      await axiosPrivate.get(`auth/recover/${email}`);
       setLoading(false);
       setSuccess(true);
     } catch (err: any) {
-      const message = 'Nie odnaleziono podanego adresu email.';
+      const message = 'Wystąpił nieoczekiwany błąd, spórbuj ponownie później.';
       setError(message);
       setLoading(false);
       setSuccess(false);
