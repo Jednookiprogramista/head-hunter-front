@@ -1,8 +1,9 @@
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-
 import { AuthProvider } from '../../context/AuthProvider';
 import { Auth } from '../Auth/Auth';
+import { PrimaryButton } from '../Button/PrimaryButton';
+import { StudentsListView } from '../StudentsListView/StudentsListView';
+import { Layout } from '../layout/Layout';
 // import { RequireAuth } from '../RequireAuth/RequireAuth';
 
 export const App = () => {
@@ -12,16 +13,24 @@ export const App = () => {
         <Route path="login" element={<Auth />} />
         <Route path="register" element={<Auth />} />
         <Route
+          path="list"
+          element={
+            <Layout>
+              <StudentsListView />
+            </Layout>
+          }
+        />
+
+        <Route
           path="/"
           element={
             <>
               <h1>MegaK - projekt finałowy</h1>
-              <button type="button" className="primary-btn">
-                Zaloguj się
-              </button>
+              <PrimaryButton>Zaloguj się</PrimaryButton>
             </>
           }
         />
+
         {/* <Route path="error" element={} /> */}
         {/* <Route path="*" element={} /> */}
         {/* <Route path="404" element={} /> */}
