@@ -53,7 +53,7 @@
       }
     ],
     "prettier/prettier": [
-      "warn",
+
       {
         "endOfLine": "auto"
       }
