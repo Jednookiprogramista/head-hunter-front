@@ -4,6 +4,7 @@ import { Auth } from '../Auth/Auth';
 import { PrimaryButton } from '../Button/PrimaryButton';
 import { StudentsListView } from '../StudentsListView/StudentsListView';
 import { Layout } from '../layout/Layout';
+import { ChangePassword } from '../Auth/ChangePassword/ChangePassword';
 // import { RequireAuth } from '../RequireAuth/RequireAuth';
 
 export const App = () => {
@@ -12,6 +13,8 @@ export const App = () => {
       <Routes>
         <Route path="login" element={<Auth />} />
         <Route path="register" element={<Auth />} />
+        <Route path="pass-recover" element={<Auth />} />
+        <Route path="change-password" element={<ChangePassword />} />
         <Route
           path="list"
           element={
