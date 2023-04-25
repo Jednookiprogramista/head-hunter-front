@@ -23,6 +23,10 @@
     letter-spacing: 0.05rem;
 }
 
+.Auth__form .success-paraph {
+    text-align: center
+}
+
 .Auth__form .forgot-pass a{
     display: inline-block;
     font-weight: normal;

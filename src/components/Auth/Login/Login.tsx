@@ -1,12 +1,15 @@
 import React, { FormEvent, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { TextField, Typography } from '@mui/material';
+
 import { axiosPrivate } from '../../../api/axios';
 import { useAuth } from '../../../hooks/useAuth';
+import { useUserValidation } from '../../../hooks/useRegisterValidation';
 import { PrimaryButton } from '../../Button/PrimaryButton';
+import { getErrorMessage, ValidationErrorType } from '../utils/getErrorMessage';
+import { MegaKLogo } from '../utils/megaKLogo';
 
 import '../Auth.css';
-import { useUserValidation } from '../../../hooks/useRegisterValidation';
 
 export const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -46,8 +49,7 @@ export const Login = () => {
       setLoading(false);
       navigate('/');
     } catch (err: any) {
-      const message = 'Nieprawidłowy e-mail lub hasło.';
-      setError(message);
+      setError(getErrorMessage(ValidationErrorType.LOGIN));
       setLoading(false);
     }
   };
@@ -56,18 +58,14 @@ export const Login = () => {
 
   return (
     <form className="Auth__form" onSubmit={handleSubmit}>
-      <img
-        src="https://static1.s123-cdn-static-a.com/uploads/5191798/400_609bb5e2d9a39.png"
-        className="logo_header"
-        alt="MegaK"
-      />
+      <img src={MegaKLogo} className="logo_header" alt="MegaK" />
       <TextField
         label="E-mail"
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         error={emailError}
-        helperText={emailError && 'Podany adres e-mail jest nieprawidłowy.'}
+        helperText={emailError && getErrorMessage(ValidationErrorType.EMAIL)}
         required
         margin="normal"
         fullWidth

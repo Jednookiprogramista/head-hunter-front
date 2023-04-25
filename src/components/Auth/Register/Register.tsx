@@ -1,9 +1,11 @@
-import React, { FormEvent, useEffect, useRef, useState } from 'react';
+import React, { FormEvent, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TextField, Typography } from '@mui/material';
 
 import { useUserValidation } from '../../../hooks/useRegisterValidation';
 import { axios } from '../../../api/axios';
+import { getErrorMessage, ValidationErrorType } from '../utils/getErrorMessage';
+import { MegaKLogo } from '../utils/megaKLogo';
 import { PrimaryButton } from '../../Button/PrimaryButton';
 
 import '../Auth.css';
@@ -15,19 +17,12 @@ export const Register = () => {
   const [passwordRepetition, setPasswordRepetition] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
-  const loginLinkRef = useRef<HTMLAnchorElement>(null!);
   const { emailError, passwordError, passwordRepetitionError } =
     useUserValidation({ email, password, passwordRepetition });
 
   useEffect(() => {
     setError('');
   }, [email, password, passwordRepetition]);
-
-  useEffect(() => {
-    if (success) {
-      loginLinkRef.current.focus();
-    }
-  }, [success]);
 
   const handleSubmit = async (e: FormEvent) => {
     try {
@@ -50,13 +45,9 @@ export const Register = () => {
       setSuccess(true);
     } catch (err: any) {
       if (err.response.status === 409) {
-        const message =
-          'Podany adres email jest już zajęty, jeśli masz już konto zaloguj się.';
-        setError(message);
+        setError(getErrorMessage(ValidationErrorType.EMAIL_TAKEN));
       } else {
-        const message =
-          'Wystąpił nieoczekiwany błąd. Spróbuj ponownie później.';
-        setError(message);
+        setError(getErrorMessage(ValidationErrorType.DEFAULT));
       }
       setSuccess(false);
     } finally {
@@ -65,21 +56,26 @@ export const Register = () => {
   };
 
   if (loading) return <p>Ładowanie</p>;
+  if (success)
+    return (
+      <div className="Auth__form">
+        <img src={MegaKLogo} className="logo_header" alt="MegaK" />
+        <Typography variant="body2" className="redirect-paraph success-paraph">
+          Konto zostało utworzone <Link to="/login">Zaloguj się</Link>
+        </Typography>
+      </div>
+    );
 
   return (
     <form className="Auth__form" onSubmit={handleSubmit}>
-      <img
-        src="https://static1.s123-cdn-static-a.com/uploads/5191798/400_609bb5e2d9a39.png"
-        className="logo_header"
-        alt="MegaK"
-      />
+      <img src={MegaKLogo} className="logo_header" alt="MegaK" />
       <TextField
         label="Adres e-mail"
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         error={emailError}
-        helperText={emailError && 'Podany adres e-mail jest nieprawidłowy.'}
+        helperText={emailError && getErrorMessage(ValidationErrorType.EMAIL)}
         required
         fullWidth
         margin="normal"
@@ -91,8 +87,7 @@ export const Register = () => {
         onChange={(e) => setPassword(e.target.value)}
         error={passwordError}
         helperText={
-          passwordError &&
-          'Hasło musi zawierać conajmniej 8 znaków, w tym jedną zwykłą literę, dużą literę, cyfrę oraz któryś ze znaków specjalnych - "?", "!", "@", "#", "$", "%"'
+          passwordError && getErrorMessage(ValidationErrorType.PASSWORD)
         }
         required
         fullWidth
@@ -104,7 +99,10 @@ export const Register = () => {
         value={passwordRepetition}
         onChange={(e) => setPasswordRepetition(e.target.value)}
         error={passwordRepetitionError}
-        helperText={passwordRepetitionError && 'Podane hasła nie są jednakowe.'}
+        helperText={
+          passwordRepetitionError &&
+          getErrorMessage(ValidationErrorType.PASSWORD_REP)
+        }
         required
         fullWidth
         margin="normal"
@@ -113,11 +111,6 @@ export const Register = () => {
         {!success && (
           <Typography variant="body2" className="redirect-paraph">
             Posiadasz już konto? <Link to="/login">Zaloguj się</Link>
-          </Typography>
-        )}
-        {success && (
-          <Typography variant="body2" className="redirect-paraph">
-            Konto zostało utworzone <Link to="/login">Zaloguj się</Link>
           </Typography>
         )}
         <PrimaryButton

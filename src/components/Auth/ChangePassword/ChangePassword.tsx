@@ -1,10 +1,12 @@
-import React, { FormEvent, useEffect, useRef, useState } from 'react';
+import React, { FormEvent, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { TextField, Typography } from '@mui/material';
 
 import { useUserValidation } from '../../../hooks/useRegisterValidation';
 import { axios } from '../../../api/axios';
 import { PrimaryButton } from '../../Button/PrimaryButton';
+import { MegaKLogo } from '../utils/megaKLogo';
+import { getErrorMessage, ValidationErrorType } from '../utils/getErrorMessage';
 
 import '../Auth.css';
 
@@ -14,7 +16,7 @@ export const ChangePassword = () => {
   const [passwordRepetition, setPasswordRepetition] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
-  const loginLinkRef = useRef<HTMLAnchorElement>(null!);
+
   const { passwordError, passwordRepetitionError } = useUserValidation({
     password,
     passwordRepetition,
@@ -26,12 +28,6 @@ export const ChangePassword = () => {
   useEffect(() => {
     setError('');
   }, [password, passwordRepetition]);
-
-  useEffect(() => {
-    if (success) {
-      loginLinkRef.current.focus();
-    }
-  }, [success]);
 
   const handleSubmit = async (e: FormEvent) => {
     try {
@@ -51,7 +47,7 @@ export const ChangePassword = () => {
       setPasswordRepetition('');
       setSuccess(true);
     } catch (err: any) {
-      setError('Wystąpił nieoczekiwany błąd. Spróbuj ponownie później.');
+      setError(getErrorMessage(ValidationErrorType.DEFAULT));
       setSuccess(false);
     } finally {
       setLoading(false);
@@ -62,11 +58,7 @@ export const ChangePassword = () => {
 
   return (
     <form className="Auth__form" onSubmit={handleSubmit}>
-      <img
-        src="https://static1.s123-cdn-static-a.com/uploads/5191798/400_609bb5e2d9a39.png"
-        className="logo_header"
-        alt="MegaK"
-      />
+      <img src={MegaKLogo} className="logo_header" alt="MegaK" />
       <TextField
         label="Nowe hasło"
         type="password"
@@ -74,8 +66,7 @@ export const ChangePassword = () => {
         onChange={(e) => setPassword(e.target.value)}
         error={passwordError}
         helperText={
-          passwordError &&
-          'Hasło musi zawierać conajmniej 8 znaków, w tym jedną zwykłą literę, dużą literę, cyfrę oraz któryś ze znaków specjalnych - "?", "!", "@", "#", "$", "%"'
+          passwordError && getErrorMessage(ValidationErrorType.PASSWORD)
         }
         required
         fullWidth
@@ -87,7 +78,10 @@ export const ChangePassword = () => {
         value={passwordRepetition}
         onChange={(e) => setPasswordRepetition(e.target.value)}
         error={passwordRepetitionError}
-        helperText={passwordRepetitionError && 'Podane hasła nie są jednakowe.'}
+        helperText={
+          passwordRepetitionError &&
+          getErrorMessage(ValidationErrorType.PASSWORD_REP)
+        }
         required
         fullWidth
         margin="normal"

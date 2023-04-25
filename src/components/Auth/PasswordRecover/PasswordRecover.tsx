@@ -2,9 +2,11 @@ import React, { FormEvent, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TextField, Typography } from '@mui/material';
 
+import { PrimaryButton } from '../../Button/PrimaryButton';
 import { useUserValidation } from '../../../hooks/useRegisterValidation';
 import { axiosPrivate } from '../../../api/axios';
-import { PrimaryButton } from '../../Button/PrimaryButton';
+import { getErrorMessage, ValidationErrorType } from '../utils/getErrorMessage';
+import { MegaKLogo } from '../utils/megaKLogo';
 
 import '../Auth.css';
 
@@ -37,8 +39,7 @@ export const PasswordRecover = () => {
       setLoading(false);
       setSuccess(true);
     } catch (err: any) {
-      const message = 'Wystąpił nieoczekiwany błąd, spórbuj ponownie później.';
-      setError(message);
+      setError(getErrorMessage(ValidationErrorType.DEFAULT));
       setLoading(false);
       setSuccess(false);
     }
@@ -48,11 +49,7 @@ export const PasswordRecover = () => {
 
   return (
     <form className="Auth__form" onSubmit={handleSubmit}>
-      <img
-        src="https://static1.s123-cdn-static-a.com/uploads/5191798/400_609bb5e2d9a39.png"
-        className="logo_header"
-        alt="MegaK"
-      />
+      <img src={MegaKLogo} className="logo_header" alt="MegaK" />
       <h3>Zapomniałeś hasła?</h3>
       <p className="pass-recover-info">
         Podaj swój adres email, aby zresetować hasło
@@ -62,7 +59,7 @@ export const PasswordRecover = () => {
         type="email"
         value={email}
         error={emailError}
-        helperText={emailError && 'Podany adres email jest nieprawidłowy.'}
+        helperText={emailError && getErrorMessage(ValidationErrorType.EMAIL)}
         onChange={(e) => setEmail(e.target.value)}
         required
         margin="normal"
