@@ -8,21 +8,21 @@ import { ListConversation } from '../layout/listConversation/ListConversation';
 // import { RequireAuth } from '../RequireAuth/RequireAuth';
 
 export const App = () => {
-    return (
-        <AuthProvider>
-            <Routes>
-                <Route path="login" element={<Auth />} />
-                <Route path="register" element={<Auth />} />
+  return (
+    <AuthProvider>
+      <Routes>
+        <Route path="login" element={<Auth />} />
+        <Route path="register" element={<Auth />} />
 
-                <Route path="list" element={<List />} />
-                <Route path="conversation" element={<ListConversation />} />
+        <Route path="list" element={<List />} />
+        <Route path="conversation" element={<ListConversation />} />
 
-                <Route
-                    path="/"
-                    element={
-                        <>
-                            <h1>MegaK - projekt finałowy</h1>
-                            {/* <Route path="error" element={<Error />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <h1>MegaK - projekt finałowy</h1>
+              {/* <Route path="error" element={<Error />} />
               <Route path="*" element={<NotFound />} />
               <Route path="404" element={<NotFound />} />
               <Route path="/" element={<RequireAuth />}>
@@ -32,10 +32,10 @@ export const App = () => {
                 </Route>
                 <Route path="/" element={<Home />} />
               </Route> */}
-                        </>
-                    }
-                />
-            </Routes>
-        </AuthProvider>
-    );
+            </>
+          }
+        />
+      </Routes>
+    </AuthProvider>
+  );
 };
