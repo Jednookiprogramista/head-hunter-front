@@ -1,0 +1,16 @@
+.box-salary {
+    background-color: #292A2B;
+    color: #f7f7f7;
+    padding: 4px 10px;
+}
+
+.salary-expectations {
+    display: flex;
+    gap: 12px;
+}
+
+.salary-expectations div {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}

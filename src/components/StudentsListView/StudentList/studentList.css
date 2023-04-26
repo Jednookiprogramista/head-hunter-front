@@ -72,7 +72,7 @@
 
     gap: 10px;
 
-    padding: 2px;
+    padding: 14px 20px;
     border-radius: 2px;
     background-color: rgb(41,42,43);
     justify-content: space-between;
@@ -83,9 +83,6 @@
 
 .search-place{
     background-color: rgb(30,30,31);
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
     display: flex;
     align-items: unset;
     gap: 10px;
