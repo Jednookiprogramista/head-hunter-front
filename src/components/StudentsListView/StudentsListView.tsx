@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { FilterModal } from '../FilterModal/FilterModal';
-import { SecondaryButton } from '../Button/SecondaryButton';
 import { StudentList } from './StudentList/StudentList';
 
 export const StudentsListView = () => {
@@ -10,10 +9,7 @@ export const StudentsListView = () => {
 
   return (
     <>
-      <div>
-        <SecondaryButton onClick={handleOpen}>Filtrowanie</SecondaryButton>
-        <StudentList />
-      </div>
+      <StudentList onFilterClick={handleOpen} />
       <FilterModal isOpen={open} onCancel={handleClose} />
     </>
   );

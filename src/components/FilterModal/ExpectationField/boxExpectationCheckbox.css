@@ -1,0 +1,11 @@
+.box-expectation {
+    background-color: #292A2B;
+    color: #f7f7f7;
+    padding: 4px 10px;
+}
+
+.box-expectation-selected {
+    color: #f7f7f7;
+    background-color: #e02735;
+    padding: 4px 10px;
+}

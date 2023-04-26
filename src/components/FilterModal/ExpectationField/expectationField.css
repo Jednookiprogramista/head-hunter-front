@@ -1,0 +1,4 @@
+.box-expectation-container {
+    display: flex;
+    gap: 8px;
+}

@@ -1,4 +1,4 @@
-import { Box } from '@mui/material';
+import { FieldTitle } from '../components/FieldTitle';
 import { BoxStarScoreCheckbox } from './BoxStarScoreCheckbox';
 import './starsScoreField.css';
 
@@ -9,13 +9,7 @@ type StarsScoreFieldProps = {
 export const StarsScoreField = ({ title }: StarsScoreFieldProps) => {
   return (
     <>
-      <Box
-        sx={{
-          margin: '20px 0 5px 0',
-        }}
-      >
-        {title}
-      </Box>
+      <FieldTitle title={title} />
       <div className="box-star-container">
         <BoxStarScoreCheckbox score={5} />
         <BoxStarScoreCheckbox score={4} />
