@@ -5,6 +5,7 @@ import { PrimaryButton } from '../Button/PrimaryButton';
 import { StudentsListView } from '../StudentsListView/StudentsListView';
 import { Layout } from '../layout/Layout';
 import { ChangePassword } from '../Auth/ChangePassword/ChangePassword';
+import { ListConversation } from '../layout/listConversation/ListConversation';
 // import { RequireAuth } from '../RequireAuth/RequireAuth';
 
 export const App = () => {
@@ -20,6 +21,14 @@ export const App = () => {
           element={
             <Layout>
               <StudentsListView />
+            </Layout>
+          }
+        />
+        <Route
+          path="conversation"
+          element={
+            <Layout>
+              <ListConversation />
             </Layout>
           }
         />
