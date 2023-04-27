@@ -1,107 +1,76 @@
-
 .bar {
-
-    background: rgb(30, 30, 31);
-    padding: 10px 20px;
-    height: 60px;
-    color: white;
-    font-family: Arial, serif;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: 1px solid black;
-    position: sticky;
+  background: rgb(30, 30, 31);
+  padding: 10px 20px;
+  height: 60px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid black;
+  position: sticky;
 }
 
-.logo_header{
-    width: 72px;
-    height: 52px;
+.logo_header {
+  width: 72px;
+  height: 52px;
 }
 .left-tittle {
-    display: flex;
-    align-items: center;
-    gap: 67px;
-
+  display: flex;
+  align-items: center;
+  gap: 67px;
 }
 
 .right-tittle {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    cursor: pointer;
-    background-color: initial;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  background-color: initial;
 }
 
-.profile-picture{
-
-    display: flex;
-    align-items: center;
-    font-weight: 400;
-    gap: 10px;
-    position: relative;
+.profile-picture {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  gap: 10px;
+  position: relative;
 }
 
 .profile {
-    object-fit: cover;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+  object-fit: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
-.button-header{
-    background: rgb(30, 30, 31);
-    color: white;
-    border: none;
+.button-header {
+  background: rgb(30, 30, 31);
+  color: white;
+  border: none;
 }
 
-.field1{
-    position: absolute;
-    object-fit: cover;
-    display: flex;
-    height: 20px;
-    flex-direction: column;
-    width: auto;
-    align-items: flex-start;
-    top: 49px;
-    left: 30px;
-    right: 10px;
-    background: rgb(30, 30, 31);
-    padding: 21px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.47);
-    color: white;
-
+.Header__button {
+  text-align: left;
+  position: absolute;
+  height: 30px;
+  width: 210px;
+  background: rgb(30, 30, 31);
+  border: none;
+  color: white;
 }
 
-.field2 {
-    position: absolute;
-    object-fit: cover;
-    display: flex;
-    height: 20px;
-    flex-direction: column;
-    width: auto;
-    align-items: flex-start;
-    top: 94px;
-    left: 30px;
-    right: 10px;
-    background: rgb(30, 30, 31);
-    padding: 21px;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.47);
-    color: white;
-
+.button1 {
+  top: 50px;
+  left: -10px;
+}
+.button1 a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
 }
 
-
-
-
-
-
-
-
+.button2 {
+  top: 80px;
+  left: -10px;
+}

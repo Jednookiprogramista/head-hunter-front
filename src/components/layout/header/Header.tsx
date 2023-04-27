@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+
+import { LogoutLink } from '../../Auth/LogoutLink/LogoutLink';
 
 import './header.css';
 
@@ -13,11 +16,13 @@ export const Header = () => {
   return (
     <header className="bar">
       <div className="left-tittle">
-        <img
-          src="https://static1.s123-cdn-static-a.com/uploads/5191798/400_609bb5e2d9a39.png"
-          className="logo_header"
-          alt="MegaK"
-        />
+        <Link to="/list">
+          <img
+            src="https://static1.s123-cdn-static-a.com/uploads/5191798/400_609bb5e2d9a39.png"
+            className="logo_header"
+            alt="MegaK"
+          />
+        </Link>
       </div>
       <button type="button" className="button-header">
         <div className="right-tittle">
@@ -31,12 +36,12 @@ export const Header = () => {
             <ArrowDropDownIcon fontSize="large" onClick={handleExpand} />
             {expanded && (
               <div>
-                <button type="button" className="field1">
-                  Konto
+                <button type="button" className="Header__button button1">
+                  <Link to="/settings">Konto</Link>
                 </button>
 
-                <button type="button" className="field2">
-                  Wyloguj
+                <button type="button" className="Header__button button2">
+                  <LogoutLink />
                 </button>
               </div>
             )}
