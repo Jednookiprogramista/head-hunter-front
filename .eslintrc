@@ -53,7 +53,9 @@
       }
     ],
     "prettier/prettier": [
-    "error",
+  develop
+      "error",
+  feature/Auth
       {
         "endOfLine": "auto"
       }

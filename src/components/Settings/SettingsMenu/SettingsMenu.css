@@ -1,0 +1,47 @@
+.SettingsOptions {
+    width: 100%;
+    margin-top: .5rem;
+    margin-inline: auto;
+    border-radius: .5rem;
+    max-width: 660px;
+    padding: 2rem;
+}
+
+.SettingsOptions__title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: white;
+    padding: 0;
+    text-shadow: none;
+}
+
+.SettingsOptions__links-group {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.SettingsOptions__link {
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    z-index: 1;
+    padding: 6px 10px;
+    color: #f7f7f7;
+    background-color: #e5313f;
+    border-radius: .3rem;
+    overflow: hidden;
+}
+
+.SettingsOptions__link:hover {
+    background-color: #d12332;
+    transition: all 0.5s ease 0s;
+}
+
+.SettingsOptions__link--delete {
+    color: #ffffff;
+    background-color: #860404;
+    transition: all 0.5s ease 0s;
+}
