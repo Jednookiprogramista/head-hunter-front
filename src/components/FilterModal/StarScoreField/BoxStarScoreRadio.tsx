@@ -1,13 +1,14 @@
-import { Checkbox } from '@mui/material';
+import { Radio } from '@mui/material';
 import { BoxStarScore } from './BoxStarScore';
 
-type BoxStarScoreCheckboxProps = {
+type BoxStarScoreRadioProps = {
   score: number;
 };
 
-export const BoxStarScoreCheckbox = ({ score }: BoxStarScoreCheckboxProps) => {
+export const BoxStarScoreRadio = ({ score }: BoxStarScoreRadioProps) => {
   return (
-    <Checkbox
+    <Radio
+      value={score}
       style={{ padding: 0 }}
       icon={<BoxStarScore score={score} />}
       checkedIcon={<BoxStarScore score={score} selected />}

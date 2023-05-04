@@ -1,11 +1,14 @@
 import { TextField } from '@mui/material';
+import { useField } from 'formik';
 import { FieldTitle } from '../components/FieldTitle';
 
 type MonthFieldProps = {
   title: string;
+  name: string;
 };
 
-export const MonthField = ({ title }: MonthFieldProps) => {
+export const MonthField = ({ title, name }: MonthFieldProps) => {
+  const [field] = useField(name);
   return (
     <>
       <FieldTitle title={title} />
@@ -29,6 +32,7 @@ export const MonthField = ({ title }: MonthFieldProps) => {
               borderBottomColor: '#e02735',
             },
           }}
+          {...field}
         />
       </div>
     </>

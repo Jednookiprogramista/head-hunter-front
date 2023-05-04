@@ -1,11 +1,13 @@
-import { RadioGroup, FormControlLabel, Radio } from '@mui/material';
+import { FormControlLabel, Radio, RadioGroup } from '@mui/material';
+import { useField } from 'formik';
 import { FieldTitle } from '../components/FieldTitle';
 
 type InternshipFormProps = {
   title: string;
+  name: string;
 };
 
-const RadioButton = ({ value, label }: { value: string; label: string }) => (
+const RadioButton = ({ value, label }: { value: boolean; label: string }) => (
   <FormControlLabel
     value={value}
     control={
@@ -27,13 +29,14 @@ const RadioButton = ({ value, label }: { value: string; label: string }) => (
   />
 );
 
-export const InternshipForm = ({ title }: InternshipFormProps) => {
+export const InternshipForm = ({ title, name }: InternshipFormProps) => {
+  const [field] = useField(name);
   return (
     <>
       <FieldTitle title={title} />
-      <RadioGroup style={{ gap: 6 }}>
-        <RadioButton value="yes" label="Tak" />
-        <RadioButton value="no" label="Nie" />
+      <RadioGroup style={{ gap: 6 }} {...field}>
+        <RadioButton value label="Tak" />
+        <RadioButton value={false} label="Nie" />
       </RadioGroup>
     </>
   );

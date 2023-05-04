@@ -1,22 +1,27 @@
+import { RadioGroup } from '@mui/material';
+import { useField } from 'formik';
 import { FieldTitle } from '../components/FieldTitle';
-import { BoxStarScoreCheckbox } from './BoxStarScoreCheckbox';
+import { BoxStarScoreRadio } from './BoxStarScoreRadio';
 import './starsScoreField.css';
 
 type StarsScoreFieldProps = {
   title: string;
+  name: string;
 };
 
-export const StarsScoreField = ({ title }: StarsScoreFieldProps) => {
+export const StarsScoreField = ({ title, name }: StarsScoreFieldProps) => {
+  const [field] = useField(name);
   return (
     <>
       <FieldTitle title={title} />
-      <div className="box-star-container">
-        <BoxStarScoreCheckbox score={5} />
-        <BoxStarScoreCheckbox score={4} />
-        <BoxStarScoreCheckbox score={3} />
-        <BoxStarScoreCheckbox score={2} />
-        <BoxStarScoreCheckbox score={1} />
-      </div>
+
+      <RadioGroup row className="box-star-container" {...field}>
+        <BoxStarScoreRadio score={5} />
+        <BoxStarScoreRadio score={4} />
+        <BoxStarScoreRadio score={3} />
+        <BoxStarScoreRadio score={2} />
+        <BoxStarScoreRadio score={1} />
+      </RadioGroup>
     </>
   );
 };

@@ -3,8 +3,8 @@
     width: 520px;
     max-height: 80vh;
 
-    overflow: hidden;
-
+    overflow: scroll;
+    
     display: flex;
     flex-direction: column;
     background-color: #0a0a0a;
