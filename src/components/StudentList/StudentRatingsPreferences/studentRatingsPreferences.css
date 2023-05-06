@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.studentRatingsPreferences {
+  display: flex;
+  max-width: 1390px;
+  margin: 0 auto;
+}
+
+.singleStudentRatingsPreferences {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Catamaran', sans-serif;
+  background-color: #292a2b;
+  min-height: 110px;
+  max-width: 160px;
+  margin-right: 1px;
+}
+
+.descriptionRatingsPreferences {
+  margin-top: 17px;
+  margin-left: 15px;
+  color: #cfcfcf;
+  font-size: 11px;
+}
+
+.displayStudentRatingsPreferences {
+  display: flex;
+  margin-left: 15px;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.displayRatingsPreferences {
+  font-weight: bold;
+  color: #f7f7f7;
+}
+
+.range {
+  color: #9e9e9e;
+}

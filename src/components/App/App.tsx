@@ -16,6 +16,7 @@ export const App = () => {
       <Routes>
         <Route path="login" element={<Auth />} />
         <Route path="register" element={<Auth />} />
+
         <Route path="pass-recover" element={<Auth />} />
         <Route path="change-password" element={<ChangePassword />} />
         <Route path="/" element={<RequireAuth />}>
@@ -34,7 +35,6 @@ export const App = () => {
           />
           <Route path="conversation" element={<ListConversation />} />
         </Route>
-
         {/* <Route path="error" element={} /> */}
         {/* <Route path="*" element={} /> */}
         {/* <Route path="404" element={} /> */}
