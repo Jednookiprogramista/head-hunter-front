@@ -17,10 +17,10 @@ type FilterModalProps = {
 };
 
 type FormValues = {
-  courseCompletion: number | null;
-  courseEngagement: number | null;
-  projectDegree: number | null;
-  teamProjectDegree: number | null;
+  courseCompletion: number | '';
+  courseEngagement: number | '';
+  projectDegree: number | '';
+  teamProjectDegree: number | '';
   expectedTypeWork?: ExpectedTypeWork[];
   expectedContractType?: ExpectedContractType[];
   expectedSalary: { min: number | string; max: number | string };
@@ -29,10 +29,10 @@ type FormValues = {
 };
 
 const initialValues: FormValues = {
-  courseCompletion: null,
-  courseEngagement: null,
-  projectDegree: null,
-  teamProjectDegree: null,
+  courseCompletion: '',
+  courseEngagement: '',
+  projectDegree: '',
+  teamProjectDegree: '',
   expectedSalary: { min: '', max: '' },
   canTakeApprenticeship: null,
   monthsOfCommercialExp: '',
@@ -44,7 +44,7 @@ export const FilterModal = ({ isOpen, onCancel }: FilterModalProps) => {
   };
 
   return (
-    <Dialog open={isOpen} onClose={handleClose}>
+    <Dialog className="dialog" open={isOpen} onClose={handleClose}>
       <div className="dialog-container">
         <Formik<FormValues>
           initialValues={initialValues}

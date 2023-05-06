@@ -1,4 +1,14 @@
-.box-star-container {
+.score {
     display: flex;
-    gap: 8px;
+    align-items: center;
+    gap: 3px;
+}
+
+.score-input {
+    width: 50px;
+    background-color: #292A2B;
+    color: #f7f7f7;
+    border: none;
+    text-align: center;
+    margin-right: 5px;
 }

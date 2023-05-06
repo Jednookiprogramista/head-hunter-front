@@ -1,7 +1,6 @@
-import { RadioGroup } from '@mui/material';
+import StarIcon from '@mui/icons-material/Star';
 import { useField } from 'formik';
 import { FieldTitle } from '../components/FieldTitle';
-import { BoxStarScoreRadio } from './BoxStarScoreRadio';
 import './starsScoreField.css';
 
 type StarsScoreFieldProps = {
@@ -14,14 +13,22 @@ export const StarsScoreField = ({ title, name }: StarsScoreFieldProps) => {
   return (
     <>
       <FieldTitle title={title} />
-
-      <RadioGroup row className="box-star-container" {...field}>
-        <BoxStarScoreRadio score={5} />
-        <BoxStarScoreRadio score={4} />
-        <BoxStarScoreRadio score={3} />
-        <BoxStarScoreRadio score={2} />
-        <BoxStarScoreRadio score={1} />
-      </RadioGroup>
+      <div className="score">
+        <input
+          className="score-input"
+          type="number"
+          min={0}
+          max={5}
+          {...field}
+        />
+        / 5
+        <StarIcon
+          style={{
+            color: '#e02735',
+            fontSize: '16px',
+          }}
+        />
+      </div>
     </>
   );
 };

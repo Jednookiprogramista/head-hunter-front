@@ -1,7 +1,11 @@
+.dialog div {
+    border-radius: 0;
+}
+
 .dialog-container {
     /* @TODO: responsive design (temporarily set a fixed size) */
     width: 520px;
-    max-height: 80vh;
+    max-height: 90vh;
 
     overflow: scroll;
     
