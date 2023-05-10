@@ -1,6 +1,6 @@
 import React from 'react';
 // eslint-disable-next-line import/extensions
-import { GetOneStudentResponse } from 'head-hunter-backend/src/student/dto/student.dto';
+import { GetOneStudentResponse } from 'types';
 import { SingleStudentRatings } from './SingleStudentRatings';
 import { SingleStudentPreferences } from './SingleStudentPreferences';
 
@@ -15,19 +15,19 @@ export const StudentRatingsPreferences = (props: GetOneStudentProps) => {
     <div className="studentRatingsPreferences">
       <SingleStudentRatings
         description="Ocena przejścia Kursu"
-        valueRatingPreferences={props.student.courseCompletion}
+        valueRatingPreferences={(props.student.courseCompletion).toString()}
       />
       <SingleStudentRatings
         description="Ocena aktywności i zaangażowania na kursie"
-        valueRatingPreferences={props.student.courseEngagement}
+        valueRatingPreferences={(props.student.courseEngagement).toString()}
       />
       <SingleStudentRatings
         description="Ocena kodu w projekcie własnym"
-        valueRatingPreferences={props.student.projectDegree}
+        valueRatingPreferences={(props.student.projectDegree).toString()}
       />
       <SingleStudentRatings
         description="Ocena pracy w zespole Scrum"
-        valueRatingPreferences={props.student.teamProjectDegree}
+        valueRatingPreferences={(props.student.teamProjectDegree).toString()}
       />
       <SingleStudentPreferences
         description="Preferowane miejsce pracy"
@@ -47,11 +47,11 @@ export const StudentRatingsPreferences = (props: GetOneStudentProps) => {
       />
       <SingleStudentPreferences
         description="Zgoda na odbycie bezpłatnych praktyk/stażu na początek"
-        valueRatingPreferences={props.student.canTakeApprenticeship}
+        valueRatingPreferences={(props.student.canTakeApprenticeship)+""}
       />
       <SingleStudentPreferences
         description="Komercyjne doświadczenie w programowaniu"
-        valueRatingPreferences={props.student.monthsOfCommercialExp}
+        valueRatingPreferences={(props.student.monthsOfCommercialExp).toString()}
       />
     </div>
   );
