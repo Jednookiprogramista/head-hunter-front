@@ -86,6 +86,7 @@
     display: flex;
     align-items: unset;
     gap: 10px;
+    cursor: pointer;
 }
 
 
@@ -93,6 +94,7 @@
     background-color: rgb(30,30,31);
     border: none;
     width: 300px;
+    color: white;
 
 
 

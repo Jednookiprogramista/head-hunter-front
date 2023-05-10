@@ -5,6 +5,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { LogoutLink } from '../../Auth/LogoutLink/LogoutLink';
 
 import './header.css';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   const [expanded, setExpanded] = useState(false);
@@ -15,16 +16,20 @@ export const Header = () => {
 
   return (
     <header className="bar">
-      <div className="left-tittle">
-        <Link to="/list">
+
+      <Link to="/list" style={{ textDecoration: 'none' }}>
+        <div className="left-tittle">
+
           <img
             src="https://static1.s123-cdn-static-a.com/uploads/5191798/400_609bb5e2d9a39.png"
             className="logo_header"
             alt="MegaK"
           />
-        </Link>
-      </div>
-      <button type="button" className="button-header">
+
+        </div>
+      </Link>
+      <button type="button" className="button-header" onClick={handleExpand}>
+
         <div className="right-tittle">
           <div className="profile-picture">
             <img
@@ -33,7 +38,7 @@ export const Header = () => {
               alt="Main profile"
             />
             <span className="my-name"> Mateusz Kowalski </span>
-            <ArrowDropDownIcon fontSize="large" onClick={handleExpand} />
+            <ArrowDropDownIcon fontSize="large" />
             {expanded && (
               <div>
                 <button type="button" className="Header__button button1">

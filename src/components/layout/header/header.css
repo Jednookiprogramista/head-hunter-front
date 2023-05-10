@@ -10,31 +10,33 @@
   position: sticky;
 }
 
-.logo_header {
-  width: 72px;
-  height: 52px;
+
+.logo_header{
+    width: 72px;
+    height: 52px;
+
 }
 .left-tittle {
-  display: flex;
-  align-items: center;
-  gap: 67px;
+    display: flex;
+    align-items: center;
+    gap: 67px;
+    position: sticky;
+
+
+
 }
 
 .right-tittle {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  cursor: pointer;
-  background-color: initial;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    background-color: initial;
+    position: sticky;
 }
 
-.profile-picture {
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-  gap: 10px;
-  position: relative;
-}
+
+
 
 .profile {
   object-fit: cover;
@@ -43,20 +45,46 @@
   border-radius: 50%;
 }
 
-.button-header {
-  background: rgb(30, 30, 31);
-  color: white;
-  border: none;
+
+.button-header{
+    background: rgb(30, 30, 31);
+    color: white;
+    border: none;
+
 }
 
-.Header__button {
-  text-align: left;
-  position: absolute;
-  height: 30px;
-  width: 210px;
-  background: rgb(30, 30, 31);
-  border: none;
-  color: white;
+
+.profile-picture{
+
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    gap: 10px;
+    position: relative;
+}
+
+
+.field1{
+    position: absolute;
+    object-fit: cover;
+    display: flex;
+    height: 20px;
+    flex-direction: column;
+    width: auto;
+    align-items: flex-start;
+    top: 49px;
+    left: 30px;
+    right: 10px;
+    background: rgb(30, 30, 31);
+    padding: 21px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.47);
+    color: white;
+
+
 }
 
 .button1 {
@@ -70,7 +98,16 @@
   width: 100%;
 }
 
-.button2 {
-  top: 80px;
-  left: -10px;
+.all-including-profile-button{
+    border: none;
+    cursor: pointer;
+   background: rgb(30, 30, 31);
+    color: white;
 }
+
+
+
+
+
+
+

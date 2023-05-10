@@ -5,18 +5,15 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {
-  CandidateBar,
-  countCandidateDivBars,
-} from './candidateBar/CandidateBar';
+import { CandidateBar, idCount } from './candidateBar/CandidateBar';
 import './studentList.css';
 import { SecondaryButton } from '../../Button/SecondaryButton';
 
 type StudentListProps = {
   onFilterClick: () => void;
-}
+};
 
-export const StudentList = ({onFilterClick}: StudentListProps) => {
+export const StudentList = ({ onFilterClick }: StudentListProps) => {
   const [selected, setSelected] = useState<number | null>(1);
 
   return (
@@ -65,7 +62,7 @@ export const StudentList = ({onFilterClick}: StudentListProps) => {
         <div className="footer-container">
           <span>Ilość elementów</span>
           <button type="button" className="buttons-footer-counter">
-            {countCandidateDivBars()}
+            {idCount}
             <KeyboardArrowDownIcon />
           </button>
           <div className="footer-span">

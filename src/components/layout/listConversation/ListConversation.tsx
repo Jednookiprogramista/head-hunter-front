@@ -7,19 +7,32 @@ import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import { Header } from '../header/Header';
 
-function countDivsWithClass() {
-  const divs = document.querySelectorAll('.third-bar-conv');
-  return divs.length;
+interface ListConversationCandidatesTypes {
+  id: number;
+  name: string;
+  reservation: string;
+  img: string;
 }
+
+const ListConversationCandidates: ListConversationCandidatesTypes[] = [
+  {
+    name: 'Michał Kaszuba',
+    reservation: '11.07.2022 r.',
+    id: 9,
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjPRvgfbHRKnbtJvgUiay6jvyFZST8vUjY_uc-cA1b&s',
+  },
+];
+
+export const idCountListConversation = ListConversationCandidates.filter(
+  (candidate) => candidate.id,
+).length;
 
 export const ListConversation = () => {
   const [selected, setSelected] = useState<number | null>(2);
 
   return (
     <>
-      <Header />
       <div className="container">
         <div className="first-bar">
           <Link to="/list" style={{ textDecoration: 'none' }}>
@@ -59,93 +72,38 @@ export const ListConversation = () => {
             </button>
           </div>
         </div>
-        <div className="third-bar-conv">
-          <div className="reservation">
-            <p>Rezerwacja do</p>
-            <p>11.07.2022 r.</p>
+        {ListConversationCandidates.map((candidate) => (
+          <div className="third-bar-conv" key={candidate.id}>
+            <div className="reservation">
+              <p>Rezerwacja do</p>
+              <p>{candidate.reservation}</p>
+            </div>
+            <div className="container-of-candidate">
+              <img alt="candidate" src={candidate.img} className="profile" />
+
+              <span>{candidate.name}</span>
+            </div>
+            <div className="three-buttons">
+              <button type="button" className="btn-reserve-call">
+                Pokaż CV
+              </button>
+              <button type="button" className="btn-reserve-call">
+                {' '}
+                Brak zainteresowania
+              </button>
+              <button type="button" className="btn-reserve-call">
+                Zatrudniony
+              </button>
+            </div>
+            <KeyboardArrowDownIcon fontSize="large" />
           </div>
-          <div className="container-of-candidate">
-            <img
-              className="profile"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjPRvgfbHRKnbtJvgUiay6jvyFZST8vUjY_uc-cA1b&s"
-              alt="candidate"
-            />
-            <span>Michał Kaszuba</span>
-          </div>
-          <div className="three-buttons">
-            <button type="button" className="btn-reserve-call">
-              Pokaż CV
-            </button>
-            <button type="button" className="btn-reserve-call">
-              {' '}
-              Brak zainteresowania
-            </button>
-            <button type="button" className="btn-reserve-call">
-              Zatrudniony
-            </button>
-          </div>
-          <KeyboardArrowDownIcon fontSize="large" />
-        </div>
-        <div className="third-bar-conv">
-          <div className="reservation">
-            <p>Rezerwacja do</p>
-            <p>11.07.2022 r.</p>
-          </div>
-          <div className="container-of-candidate">
-            <img
-              className="profile"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjPRvgfbHRKnbtJvgUiay6jvyFZST8vUjY_uc-cA1b&s"
-              alt="candidate"
-            />
-            <span>Michał Kaszuba</span>
-          </div>
-          <div className="three-buttons">
-            <button type="button" className="btn-reserve-call">
-              Pokaż CV
-            </button>
-            <button type="button" className="btn-reserve-call">
-              {' '}
-              Brak zainteresowania
-            </button>
-            <button type="button" className="btn-reserve-call">
-              Zatrudniony
-            </button>
-          </div>
-          <KeyboardArrowDownIcon fontSize="large" />
-        </div>
-        <div className="third-bar-conv">
-          <div className="reservation">
-            <p>Rezerwacja do</p>
-            <p>11.07.2022 r.</p>
-          </div>
-          <div className="container-of-candidate">
-            <img
-              className="profile"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjPRvgfbHRKnbtJvgUiay6jvyFZST8vUjY_uc-cA1b&s"
-              alt="candidate"
-            />
-            <span>Michał Kaszuba</span>
-          </div>
-          <div className="three-buttons">
-            <button type="button" className="btn-reserve-call">
-              Pokaż CV
-            </button>
-            <button type="button" className="btn-reserve-call">
-              {' '}
-              Brak zainteresowania
-            </button>
-            <button type="button" className="btn-reserve-call">
-              Zatrudniony
-            </button>
-          </div>
-          <KeyboardArrowDownIcon fontSize="large" />
-        </div>
+        ))}
       </div>
       <footer className="footer-list">
         <div className="footer-container">
           <span>Ilość elementów</span>
           <button type="button" className="buttons-footer-counter">
-            {countDivsWithClass()}
+            {idCountListConversation}
             <KeyboardArrowDownIcon />
           </button>
           <div className="footer-span">
