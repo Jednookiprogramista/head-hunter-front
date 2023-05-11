@@ -5,6 +5,7 @@
     width: auto;
     height: auto;
     cursor: pointer;
+    border: none;
     margin-bottom: 10px;
 }
 
@@ -25,8 +26,6 @@
     border-bottom: 20px solid rgb(30, 30, 31);
     gap: 15px;
     justify-content: space-between;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin: 10px 23px;
 
 }

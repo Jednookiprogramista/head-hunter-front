@@ -15,7 +15,7 @@ interface ListConversationCandidatesTypes {
   img: string;
 }
 
-const ListConversationCandidates: ListConversationCandidatesTypes[] = [
+export const ListConversationCandidates: ListConversationCandidatesTypes[] = [
   {
     name: 'Michał Kaszuba',
     reservation: '11.07.2022 r.',
@@ -84,9 +84,11 @@ export const ListConversation = () => {
               <span>{candidate.name}</span>
             </div>
             <div className="three-buttons">
-              <button type="button" className="btn-reserve-call">
-                Pokaż CV
-              </button>
+              <Link to="cv-candidate">
+                <button type="button" className="btn-reserve-call">
+                  Pokaż CV
+                </button>
+              </Link>
               <button type="button" className="btn-reserve-call">
                 {' '}
                 Brak zainteresowania
@@ -95,7 +97,10 @@ export const ListConversation = () => {
                 Zatrudniony
               </button>
             </div>
-            <KeyboardArrowDownIcon fontSize="large" />
+            <KeyboardArrowDownIcon
+              fontSize="large"
+              className="keyboardArrowDownIcon"
+            />
           </div>
         ))}
       </div>
