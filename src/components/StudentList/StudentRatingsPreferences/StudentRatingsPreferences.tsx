@@ -1,4 +1,3 @@
-import React from 'react';
 // eslint-disable-next-line import/extensions
 import { GetOneStudentResponse } from 'types';
 import { SingleStudentRatings } from './SingleStudentRatings';
@@ -15,19 +14,19 @@ export const StudentRatingsPreferences = (props: GetOneStudentProps) => {
     <div className="studentRatingsPreferences">
       <SingleStudentRatings
         description="Ocena przejścia Kursu"
-        valueRatingPreferences={(props.student.courseCompletion).toString()}
+        valueRatingPreferences={props.student.courseCompletion.toString()}
       />
       <SingleStudentRatings
         description="Ocena aktywności i zaangażowania na kursie"
-        valueRatingPreferences={(props.student.courseEngagement).toString()}
+        valueRatingPreferences={props.student.courseEngagement.toString()}
       />
       <SingleStudentRatings
         description="Ocena kodu w projekcie własnym"
-        valueRatingPreferences={(props.student.projectDegree).toString()}
+        valueRatingPreferences={props.student.projectDegree.toString()}
       />
       <SingleStudentRatings
         description="Ocena pracy w zespole Scrum"
-        valueRatingPreferences={(props.student.teamProjectDegree).toString()}
+        valueRatingPreferences={props.student.teamProjectDegree.toString()}
       />
       <SingleStudentPreferences
         description="Preferowane miejsce pracy"
@@ -47,11 +46,13 @@ export const StudentRatingsPreferences = (props: GetOneStudentProps) => {
       />
       <SingleStudentPreferences
         description="Zgoda na odbycie bezpłatnych praktyk/stażu na początek"
-        valueRatingPreferences={(props.student.canTakeApprenticeship)+""}
+        valueRatingPreferences={
+          props.student.canTakeApprenticeship ? 'tak' : 'nie'
+        }
       />
       <SingleStudentPreferences
         description="Komercyjne doświadczenie w programowaniu"
-        valueRatingPreferences={(props.student.monthsOfCommercialExp).toString()}
+        valueRatingPreferences={props.student.monthsOfCommercialExp.toString()}
       />
     </div>
   );

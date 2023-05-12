@@ -1,0 +1,21 @@
+.first-bar {
+    display: flex;
+    align-items: flex-start;
+}
+
+.des-button {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.first-bar-buttons {
+    background-color: rgb(41, 42, 43);
+    color: white;
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    border: none;
+}

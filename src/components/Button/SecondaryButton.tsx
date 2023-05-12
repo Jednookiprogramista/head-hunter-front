@@ -7,6 +7,7 @@ type SecondaryButtonProps = MuiButtonProps;
 
 export const SecondaryButton = ({
   children,
+  sx,
   ...buttonProps
 }: SecondaryButtonProps) => {
   return (
@@ -22,6 +23,7 @@ export const SecondaryButton = ({
         fontSize: '16px',
         textTransform: 'none',
         borderRadius: '0px',
+        ...sx,
       }}
       {...buttonProps}
     >

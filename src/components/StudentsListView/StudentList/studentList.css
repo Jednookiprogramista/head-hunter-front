@@ -1,143 +1,32 @@
-.container{
-    background-color: rgb(41,42,43);
-    margin: 2% 15%;
-    overflow: scroll;
-
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-.first-bar{
-    display: flex;
-    align-items: flex-start;
-
-
-
-}
-
-
-.des-button{
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    align-items: center;
-}
-
-.second-bar {
-    border-bottom: 1px solid black;
-    align-items: center;
-    border-top: 1px solid black;
-
-
-
-}
-.first-bar-buttons{
-    background-color: rgb(41,42,43);
-    color: white;
-    display: flex;
-    align-items: center;
-
-    cursor: pointer;
-    border: none;
-
-
-}
-
-
-
-.button-filter{
-    color: white;
-    background-color: rgb(30,30,31);
-    cursor: pointer;
+.btn-reserve-call{
+    background-color: #e02735;
+    color: #f7f7f7;
+    padding: 6px 8px;
     width: auto;
     height: auto;
-    display: flex;
-    align-items: flex-start;
-    margin-right: 20px;
-    margin-top: 10px;
+    cursor: pointer;
     margin-bottom: 10px;
 }
 
-.loupe{
-    margin-left: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-.search-space{
-    align-items: flex-start;
+.third-bar{
     display: flex;
-
-    gap: 10px;
-
-    padding: 14px 20px;
-    border-radius: 2px;
-    background-color: rgb(41,42,43);
-    justify-content: space-between;
-
-
-
+    flex-direction: column;
 }
 
-.search-place{
-    background-color: rgb(30,30,31);
+.username-candidate-bar{
     display: flex;
-    align-items: unset;
-    gap: 10px;
-    cursor: pointer;
-}
-
-
-.search{
-    background-color: rgb(30,30,31);
-    border: none;
-    width: 300px;
-    color: white;
-
-
-
-}
-
-
-.footer-list{
-
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 15%;
-
-    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-
+    flex-grow: 1;
 }
 
-.footer-container{
+.candidate-bar{
     display: flex;
-    padding-bottom: 20px;
-    gap: 10px;
-    flex-direction: row;
-    align-items: center;
-}
-
-.buttons-footer{
-    padding: 6px 8px;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+    border-bottom: 20px solid rgb(30, 30, 31);
+    gap: 15px;
     justify-content: space-between;
-
-
-}
-
-
-
-.buttons-footer-counter{
-    padding: 6px 8px;
-    width: 40px;
-    height: 35px;
-    cursor: pointer;
-    justify-content: space-between;
-    display: flex;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 
 }
