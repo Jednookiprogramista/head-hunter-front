@@ -15,15 +15,15 @@ export const Header = () => {
 
   return (
     <header className="bar">
-      <Link to="/list" style={{ textDecoration: 'none' }}>
-        <div className="left-tittle">
+      <div className="left-tittle">
+        <Link to="/list">
           <img
             src="https://static1.s123-cdn-static-a.com/uploads/5191798/400_609bb5e2d9a39.png"
             className="logo_header"
             alt="MegaK"
           />
-        </div>
-      </Link>
+        </Link>
+      </div>
       <button type="button" className="button-header" onClick={handleExpand}>
         <div className="right-tittle">
           <div className="profile-picture">
