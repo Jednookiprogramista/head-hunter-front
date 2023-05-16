@@ -9,6 +9,7 @@ import { RequireAuth } from '../RequireAuth/RequireAuth';
 import { SettingsView } from '../Settings/SettingsView/SettingsView';
 import { PasswordEditor } from '../Settings/PasswordEditor/PasswordEditor';
 import { EmailEditor } from '../Settings/EmailEditor/EmailEditor';
+import { CandidateCv } from '../layout/candidateCv/CandidateCv';
 
 export const App = () => {
   return (
@@ -33,6 +34,16 @@ export const App = () => {
               </Layout>
             }
           />
+
+          <Route
+            path="conversation/cv-candidate"
+            element={
+              <Layout>
+                <CandidateCv />
+              </Layout>
+            }
+          />
+
           <Route path="conversation" element={<ListConversation />} />
         </Route>
         {/* <Route path="error" element={} /> */}
