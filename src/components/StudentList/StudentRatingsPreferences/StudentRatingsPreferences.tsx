@@ -1,15 +1,17 @@
 // eslint-disable-next-line import/extensions
-import { GetOneStudentResponse } from 'types';
+import { StudentShortDetails } from 'types';
 import { SingleStudentRatings } from './SingleStudentRatings';
 import { SingleStudentPreferences } from './SingleStudentPreferences';
 
 import './studentRatingsPreferences.css';
 
-interface GetOneStudentProps {
-  student: GetOneStudentResponse;
+interface StudentRatingsPreferencesProps {
+  student: StudentShortDetails;
 }
 
-export const StudentRatingsPreferences = (props: GetOneStudentProps) => {
+export const StudentRatingsPreferences = (
+  props: StudentRatingsPreferencesProps,
+) => {
   return (
     <div className="studentRatingsPreferences">
       <SingleStudentRatings

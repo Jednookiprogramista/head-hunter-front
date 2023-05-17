@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import { AvailableStudent } from 'types';
 import { axios } from '../../api/axios';
 import { FilterModal } from '../FilterModal/FilterModal';
-import { ListFooter } from './ListFooter/ListFooter';
-import { ListTabsSwitch } from './ListTabsSwitch/ListTabsSwitch';
-import { SearchFilterRow } from './SearchFilterRow/SearchFilterRow';
-import { StudentList } from './StudentList/StudentList';
-import './studentsListView.css';
+import { AvailableStudentList } from './AvailableStudentList/AvailableStudentList';
+import './availableStudentsListView.css';
+import { ListFooter } from '../StudentList/ListFooter/ListFooter';
+import { ListTabsSwitch } from '../StudentList/ListTabsSwitch/ListTabsSwitch';
+import { SearchFilterRow } from '../StudentList/SearchFilterRow/SearchFilterRow';
 
-export const StudentsListView = () => {
+export const AvailableStudentsListView = () => {
   const [open, setOpen] = useState<boolean>(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -30,7 +30,7 @@ export const StudentsListView = () => {
         <div className="container">
           <ListTabsSwitch />
           <SearchFilterRow onFilterClick={handleOpen} />
-          <StudentList students={students} />
+          <AvailableStudentList students={students} />
         </div>
         <ListFooter />
       </div>

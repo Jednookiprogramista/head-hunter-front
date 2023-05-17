@@ -4,9 +4,7 @@
 }
 
 .des-button {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+
     align-items: center;
 }
 
@@ -15,7 +13,7 @@
     color: white;
     display: flex;
     align-items: center;
-
+    padding: 23px 20px 19px 34px;
     cursor: pointer;
     border: none;
 }

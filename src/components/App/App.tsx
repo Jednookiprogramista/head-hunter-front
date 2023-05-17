@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from '../../context/AuthProvider';
 import { Auth } from '../Auth/Auth';
-import { StudentsListView } from '../StudentsListView/StudentsListView';
+import { AvailableStudentsListView } from '../AvailableStudentsListView/AvailableStudentsListView';
 import { Layout } from '../layout/Layout';
 import { ChangePassword } from '../Auth/ChangePassword/ChangePassword';
 import { ListConversation } from '../layout/listConversation/ListConversation';
@@ -29,7 +29,7 @@ export const App = () => {
             path="list"
             element={
               <Layout>
-                <StudentsListView />
+                <AvailableStudentsListView />
               </Layout>
             }
           />
