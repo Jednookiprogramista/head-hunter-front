@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { LogoutLink } from '../../Auth/LogoutLink/LogoutLink';
-
 import './header.css';
 
 export const Header = () => {

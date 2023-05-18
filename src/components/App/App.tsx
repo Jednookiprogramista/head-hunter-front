@@ -1,15 +1,18 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from '../../context/AuthProvider';
 import { Auth } from '../Auth/Auth';
-import { StudentsListView } from '../StudentsListView/StudentsListView';
-import { Layout } from '../layout/Layout';
 import { ChangePassword } from '../Auth/ChangePassword/ChangePassword';
-import { ListConversation } from '../layout/listConversation/ListConversation';
+import { AvailableStudentsListView } from '../AvailableStudentsListView/AvailableStudentsListView';
 import { RequireAuth } from '../RequireAuth/RequireAuth';
-import { SettingsView } from '../Settings/SettingsView/SettingsView';
+import { ReservedStudentsListView } from '../ReservedStudentsListView/ReservedStudentsListView';
+import { EmailEditor } from '../Settings/EmailEditor/EmailEditor';
 import { PasswordEditor } from '../Settings/PasswordEditor/PasswordEditor';
+import { SettingsView } from '../Settings/SettingsView/SettingsView';
 import { EmailEditor } from '../Settings/EmailEditor/EmailEditor';
 import { CandidateCv } from '../layout/candidateCv/CandidateCv';
+import { Layout } from '../layout/Layout';
+import { AddStudents } from '../AdminView/AddStudents/AddStudents';
+import { AddHR } from '../AdminView/AddHR/AddHR';
 
 export const App = () => {
   return (
@@ -17,7 +20,6 @@ export const App = () => {
       <Routes>
         <Route path="login" element={<Auth />} />
         <Route path="register" element={<Auth />} />
-
         <Route path="pass-recover" element={<Auth />} />
         <Route path="change-password" element={<ChangePassword />} />
         <Route path="/" element={<RequireAuth />}>
@@ -25,12 +27,14 @@ export const App = () => {
             <Route path="password" element={<PasswordEditor />} />
             <Route path="email" element={<EmailEditor />} />
           </Route>
+          <Route path="admin/add-hr" element={<AddHR />} />
+          <Route path="admin/add-students" element={<AddStudents />} />
           <Route path="/" element={<Navigate to="list" />} />
           <Route
             path="list"
             element={
               <Layout>
-                <StudentsListView />
+                <AvailableStudentsListView />
               </Layout>
             }
           />
@@ -45,6 +49,14 @@ export const App = () => {
           />
 
           <Route path="conversation" element={<ListConversation />} />
+          <Route
+            path="conversation"
+            element={
+              <Layout>
+                <ReservedStudentsListView />
+              </Layout>
+            }
+          />
         </Route>
         {/* <Route path="error" element={} /> */}
         {/* <Route path="*" element={} /> */}

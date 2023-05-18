@@ -1,0 +1,43 @@
+.second-bar {
+    border-bottom: 1px solid black;
+    align-items: center;
+    border-top: 1px solid black;
+}
+
+.search-space {
+    align-items: flex-start;
+    display: flex;
+
+    gap: 10px;
+
+    padding: 14px 20px;
+    border-radius: 2px;
+    background-color: rgb(41, 42, 43);
+    justify-content: space-between;
+}
+
+.search-place {
+    background-color: rgb(30, 30, 31);
+    display: flex;
+    align-items: unset;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.loupe {
+    color: #666666;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.search {
+    background-color: rgb(30, 30, 31);
+    border: none;
+    width: 300px;
+    color: white;
+}
+
+.filter-alt-icon {
+    color: #4D4D4D;
+}
