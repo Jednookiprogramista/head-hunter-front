@@ -1,14 +1,14 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { AuthProvider } from '../../context/AuthProvider';
 import { Auth } from '../Auth/Auth';
-import { AvailableStudentsListView } from '../AvailableStudentsListView/AvailableStudentsListView';
-import { Layout } from '../layout/Layout';
 import { ChangePassword } from '../Auth/ChangePassword/ChangePassword';
-import { ListConversation } from '../layout/listConversation/ListConversation';
+import { AvailableStudentsListView } from '../AvailableStudentsListView/AvailableStudentsListView';
 import { RequireAuth } from '../RequireAuth/RequireAuth';
-import { SettingsView } from '../Settings/SettingsView/SettingsView';
-import { PasswordEditor } from '../Settings/PasswordEditor/PasswordEditor';
+import { ReservedStudentsListView } from '../ReservedStudentsListView/ReservedStudentsListView';
 import { EmailEditor } from '../Settings/EmailEditor/EmailEditor';
+import { PasswordEditor } from '../Settings/PasswordEditor/PasswordEditor';
+import { SettingsView } from '../Settings/SettingsView/SettingsView';
+import { Layout } from '../layout/Layout';
 
 export const App = () => {
   return (
@@ -33,7 +33,14 @@ export const App = () => {
               </Layout>
             }
           />
-          <Route path="conversation" element={<ListConversation />} />
+          <Route
+            path="conversation"
+            element={
+              <Layout>
+                <ReservedStudentsListView />
+              </Layout>
+            }
+          />
         </Route>
         {/* <Route path="error" element={} /> */}
         {/* <Route path="*" element={} /> */}

@@ -15,7 +15,7 @@ export const StudentRatingsPreferences = (
   return (
     <div className="studentRatingsPreferences">
       <SingleStudentRatings
-        description="Ocena przejścia Kursu"
+        description="Ocena przejścia kursu"
         valueRatingPreferences={props.student.courseCompletion.toString()}
       />
       <SingleStudentRatings
@@ -27,7 +27,7 @@ export const StudentRatingsPreferences = (
         valueRatingPreferences={props.student.projectDegree.toString()}
       />
       <SingleStudentRatings
-        description="Ocena pracy w zespole Scrum"
+        description="Ocena pracy w zespole w Scrum"
         valueRatingPreferences={props.student.teamProjectDegree.toString()}
       />
       <SingleStudentPreferences
@@ -39,7 +39,7 @@ export const StudentRatingsPreferences = (
         valueRatingPreferences={props.student.targetWorkCity}
       />
       <SingleStudentPreferences
-        description="Oczekiwania, typ kontraktu"
+        description="Oczekiwany typ kontraktu"
         valueRatingPreferences={props.student.expectedContractType}
       />
       <SingleStudentPreferences

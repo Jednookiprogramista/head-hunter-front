@@ -1,0 +1,9 @@
+.container {
+    background-color: rgb(41, 42, 43);
+    margin: 2% 15%;
+    overflow: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
