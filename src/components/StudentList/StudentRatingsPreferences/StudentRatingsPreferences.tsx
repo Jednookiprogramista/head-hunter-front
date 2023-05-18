@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/extensions
+// @ts-ignore
 import { StudentShortDetails } from 'types';
 import { SingleStudentRatings } from './SingleStudentRatings';
 import { SingleStudentPreferences } from './SingleStudentPreferences';
