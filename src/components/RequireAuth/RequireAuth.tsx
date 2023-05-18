@@ -11,6 +11,9 @@ export const RequireAuth = () => {
   useEffect(() => {
     if (!auth) navigate('/login', { state: { from: location.pathname } });
   }, [auth, navigate, location.pathname]);
-
+  useEffect(() => {
+    if (auth?.role === 'admin')
+      navigate('/admin/add-students', { state: { from: location.pathname } });
+  }, [auth]);
   return <Outlet />;
 };

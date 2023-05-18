@@ -43,7 +43,7 @@ export const Login = () => {
       const { data } = (await axiosPrivate.post('auth/signin', {
         email,
         password,
-      })) as { data: { id: string; accessToken: string } };
+      })) as { data: { id: string; accessToken: string; role: string | null } };
       localStorage.setItem('user', JSON.stringify({ id: data.id }));
       setAuth(data);
       setLoading(false);

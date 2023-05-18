@@ -9,6 +9,8 @@ import { EmailEditor } from '../Settings/EmailEditor/EmailEditor';
 import { PasswordEditor } from '../Settings/PasswordEditor/PasswordEditor';
 import { SettingsView } from '../Settings/SettingsView/SettingsView';
 import { Layout } from '../layout/Layout';
+import { AddStudents } from '../AdminView/AddStudents/AddStudents';
+import { AddHR } from '../AdminView/AddHR/AddHR';
 
 export const App = () => {
   return (
@@ -16,7 +18,6 @@ export const App = () => {
       <Routes>
         <Route path="login" element={<Auth />} />
         <Route path="register" element={<Auth />} />
-
         <Route path="pass-recover" element={<Auth />} />
         <Route path="change-password" element={<ChangePassword />} />
         <Route path="/" element={<RequireAuth />}>
@@ -24,6 +25,8 @@ export const App = () => {
             <Route path="password" element={<PasswordEditor />} />
             <Route path="email" element={<EmailEditor />} />
           </Route>
+          <Route path="admin/add-hr" element={<AddHR />} />
+          <Route path="admin/add-students" element={<AddStudents />} />
           <Route path="/" element={<Navigate to="list" />} />
           <Route
             path="list"

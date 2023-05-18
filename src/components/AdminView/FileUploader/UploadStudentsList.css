@@ -1,0 +1,34 @@
+.UploadInput__hidden {
+  display: none;
+}
+
+.UploadImage__box {
+  width: 25%;
+  min-width: 315px;
+  margin: 10px auto 20px;
+}
+
+.UploadImage__box li {
+  list-style: none;
+}
+
+.UploadImage__h2 {
+  margin: 10px auto;
+  text-align: center;
+}
+.upload_response {
+  color: #313131;
+}
+
+.UploadImage__upload-box {
+  border-radius: 1rem;
+  background-color: #e02735;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.5s ease 0s;
+}
+
+.UploadImage__upload-box label:hover {
+  color: #85f6c7;
+}

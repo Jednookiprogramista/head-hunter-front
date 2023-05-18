@@ -10,6 +10,7 @@ import React, {
 interface State {
   id: string;
   accessToken: string;
+  role: string | null;
 }
 
 export const AuthContext = createContext<{
