@@ -1,0 +1,332 @@
+.container-of-two{
+    display: flex;
+    flex-direction: row;
+    margin-right: 100px;
+    margin-top: 26px;
+    margin-left: -25px;
+
+
+}
+
+.user-git-photo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.container-of-profile{
+    width: 250px;
+    height: auto;
+    background-color: #292A2B;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 106px;
+    left: 230px;
+    margin-bottom: 656px;
+    margin-right: 5px;
+
+
+
+}
+
+
+.candidate-profile-cv{
+    font-size: 24px;
+}
+.profile-cv-picture{
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    opacity: 100%;
+    margin: 30px 50px 12px;
+}
+
+
+.button-come-back{
+    border: none;
+cursor: pointer;
+background-color: #222224;
+    color: white;
+    display:  flex;
+    flex-direction: row;
+    margin-left: 80px;
+    margin-bottom: 1345px;
+    margin-right: 30px;
+
+
+}
+
+
+
+
+
+.user-link{
+    color: #0B8BD4;
+    text-decoration: none;
+    display:  flex;
+    flex-direction: row;
+    gap: 5px
+}
+
+
+.contact-info-user{
+ margin-left: 22px;
+    margin-right: 40px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.phone-section{
+    display:  flex;
+    flex-direction: row;
+    gap: 10px
+}
+
+.mail-reference{
+    text-decoration: none;
+    cursor: pointer;
+    display:  flex;
+    flex-direction: row;
+    gap: 10px
+}
+
+.about-me{
+    color: #4D4D4D;
+    font-size: 16px;
+}
+.buttons-candidateCv{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 23px;
+}
+.button-candidateCv{
+    background-color: #e02735;
+    color: #f7f7f7;
+    width: 200px;
+    height: 39px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    flex-direction: row;
+
+}
+
+
+.small-container-of-user-grades-info{
+    text-align: start;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.grades-first{
+    display: flex;
+    flex-direction: row;
+    margin-top: -22.5px;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.grades{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    margin-left: 30px;
+}
+
+.container-of-grades{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    gap: 30px;
+}
+
+.small-container-of-grades
+    {display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+.paragraph-small-container-of-grades{
+    color: #CFCFCF;
+    font-size: 14px;
+    display: flex;
+    margin-left: 30px;
+
+
+}
+
+.grade-bolder{
+    font-weight: bolder;
+    font-size: 18px;
+    color: #F7F7F7;
+padding-right: 5px;
+    align-items: flex-start;
+
+}
+
+.grade{
+    color: #9E9E9E;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-right: 10px;
+}
+
+.small-container-of-requirements{
+    text-align: start;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.span-requirements{
+    font-weight: bolder;
+    font-size: 16px;
+
+    margin-bottom: 10px;
+    align-items: flex-start;
+
+}
+
+.paragraph-small-container-of-requirements{
+    color: #CFCFCF;
+    font-size: 14px;
+    display: flex;
+
+
+
+}
+
+.small-container-of-requirements-v2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    margin-left: 10px;
+    padding-top: 10px;
+    padding-right: -20px;
+    margin-bottom: 10px;
+    border-right: 1px  solid #292A2B;
+
+}
+
+
+.container-of-requirements {
+    display: flex;
+    flex-direction: row;
+
+
+
+}
+.small-container-of-requirements-v2-last{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+
+
+
+
+
+.container-of-user-cv-info{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+    align-items: start;
+
+
+}
+
+.small-container-of-user-cv-info{
+    text-align: start;
+    margin-right: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.headers-of-small-container{
+    background-color: #292A2B;
+    width: 1030px;
+    height: 60px;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    padding-left: 26px;
+
+}
+
+.text-space-for-small-containers{
+    width: 1030px;
+    background-color: #222324;
+    height: 80px;
+    padding-left: 26px;
+    border: 3px solid #222224;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+}
+
+.container-link{
+display: flex;
+    flex-direction: column;
+
+}
+
+
+.text-space-for-small-containers-link{
+    width: 1030px;
+    padding-left: 26px;
+    background-color: #222324;
+    height: 60px;
+    color: #0B8BD4;
+    gap: 10px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text-space-for-small-containers-links{
+    width: 1030px;
+    padding-left: 26px;
+    background-color: #222324;
+    height: 60px;
+    color: #0B8BD4;
+    gap: 10px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: -25px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+
+}
+

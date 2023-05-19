@@ -5,6 +5,7 @@
     width: auto;
     height: auto;
     cursor: pointer;
+    border: none;
     margin-bottom: 10px;
 }
 
@@ -34,10 +35,10 @@
 
 .candidate-bar {
     display: flex;
-    
+
     gap: 15px;
     justify-content: space-between;
-    
+
     margin-bottom: 10px;
     margin-top: 10px;
 

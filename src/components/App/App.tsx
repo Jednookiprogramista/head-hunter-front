@@ -8,6 +8,8 @@ import { ReservedStudentsListView } from '../ReservedStudentsListView/ReservedSt
 import { EmailEditor } from '../Settings/EmailEditor/EmailEditor';
 import { PasswordEditor } from '../Settings/PasswordEditor/PasswordEditor';
 import { SettingsView } from '../Settings/SettingsView/SettingsView';
+import { EmailEditor } from '../Settings/EmailEditor/EmailEditor';
+import { CandidateCv } from '../layout/candidateCv/CandidateCv';
 import { Layout } from '../layout/Layout';
 import { AddStudents } from '../AdminView/AddStudents/AddStudents';
 import { AddHR } from '../AdminView/AddHR/AddHR';
@@ -36,6 +38,17 @@ export const App = () => {
               </Layout>
             }
           />
+
+          <Route
+            path="conversation/cv-candidate"
+            element={
+              <Layout>
+                <CandidateCv />
+              </Layout>
+            }
+          />
+
+          <Route path="conversation" element={<ListConversation />} />
           <Route
             path="conversation"
             element={
