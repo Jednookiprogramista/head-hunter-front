@@ -8,7 +8,7 @@ import { ReservedStudentsListView } from '../ReservedStudentsListView/ReservedSt
 import { EmailEditor } from '../Settings/EmailEditor/EmailEditor';
 import { PasswordEditor } from '../Settings/PasswordEditor/PasswordEditor';
 import { SettingsView } from '../Settings/SettingsView/SettingsView';
-import { CandidateCv } from '../layout/candidateCv/CandidateCv';
+import { CandidateCv } from '../candidateCv/CandidateCv';
 import { Layout } from '../layout/Layout';
 import { AddStudents } from '../AdminView/AddStudents/AddStudents';
 import { AddHR } from '../AdminView/AddHR/AddHR';
