@@ -3,15 +3,17 @@ import IconButton from '@mui/material/IconButton';
 import { useState } from 'react';
 import { AvailableStudent } from 'types';
 import { PrimaryButton } from '../../Button/PrimaryButton';
-import './availableStudentList.css';
 import { StudentRatingsPreferences } from '../../StudentList/StudentRatingsPreferences/StudentRatingsPreferences';
+import './availableStudentList.css';
 
 type AvailableStudentListProps = {
   students: AvailableStudent[];
+  onStudentReserve: (studentId: string) => void;
 };
 
 export const AvailableStudentList = ({
   students,
+  onStudentReserve,
 }: AvailableStudentListProps) => {
   const [expandedStudentId, setExpandedStudentId] = useState<string | null>(
     null,
@@ -29,7 +31,9 @@ export const AvailableStudentList = ({
         <div className="candidate" key={student.id}>
           <div className="candidate-bar">
             <span className="username-candidate-bar">{student.name}</span>
-            <PrimaryButton>Zarezerwuj rozmowe</PrimaryButton>
+            <PrimaryButton onClick={() => onStudentReserve(student.id)}>
+              Zarezerwuj rozmowe
+            </PrimaryButton>
             <IconButton
               sx={{ color: '#666666' }}
               onClick={() => handleClick(student.id)}

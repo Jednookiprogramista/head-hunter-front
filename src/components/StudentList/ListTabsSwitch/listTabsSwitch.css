@@ -1,6 +1,7 @@
 .first-bar {
     display: flex;
     align-items: flex-start;
+
 }
 
 .des-button {
@@ -16,4 +17,5 @@
     padding: 23px 20px 19px 34px;
     cursor: pointer;
     border: none;
+    text-decoration: none;
 }

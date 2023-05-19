@@ -39,7 +39,7 @@ export const App = () => {
           />
 
           <Route
-            path="conversation/cv-candidate"
+            path="cv/:id"
             element={
               <Layout>
                 <CandidateCv />
