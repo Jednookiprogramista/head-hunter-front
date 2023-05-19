@@ -1,4 +1,3 @@
-import React from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import PhoneIcon from '@mui/icons-material/Phone';
@@ -10,7 +9,6 @@ import StarBorderIcon from '@mui/icons-material/StarBorder';
 import './candidateCv.css';
 import { Link } from 'react-router-dom';
 import { red } from '@mui/material/colors';
-import { ListConversationCandidates } from '../listConversation/ListConversation';
 
 export const CandidateCv = () => {
   return (
@@ -26,13 +24,11 @@ export const CandidateCv = () => {
       <div className="container-of-profile">
         <div className="user-git-photo">
           <img
-            src={ListConversationCandidates[0].img}
+            src="https://thumbs.dreamstime.com/b/profile-picture-smiling-male-employee-posing-workplace-close-up-headshot-portrait-smiling-caucasian-businessman-look-190961990.jpg"
             alt="candidate"
             className="profile-cv-picture"
           />
-          <h1 className="candidate-profile-cv">
-            {ListConversationCandidates[0].name}
-          </h1>
+          <h1 className="candidate-profile-cv">Jan Kowalski</h1>
           <a
             href="https://github.com/"
             target="_blank"
