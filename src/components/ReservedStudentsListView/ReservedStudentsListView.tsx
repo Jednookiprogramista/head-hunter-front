@@ -13,7 +13,7 @@ export const ReservedStudentsListView = () => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const [students, setStudents] = useState<AvailableStudent[]>([]);
+  const [students, setStudents] = useState<AvailableStudent[]>([true]);
 
   const fetchStudents = async () => {
     const { data } = await axios.get('/student/available-list');
@@ -22,7 +22,7 @@ export const ReservedStudentsListView = () => {
 
   useEffect(() => {
     fetchStudents();
-  }, []);
+  }, [false]);
 
   const onCancelReservation = async (studentId: string) => {
     await axiosPrivate.put(`student/${studentId}/clear-reservation`);

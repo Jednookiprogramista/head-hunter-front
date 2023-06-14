@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "types": ["../HeadHunter-backend/types"]
+      "types": ["../head_hunter_backend/HeadHunter-backend/HeadHunter-backend/types"]
     }
   }
 }
