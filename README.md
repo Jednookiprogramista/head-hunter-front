@@ -61,6 +61,9 @@ User-space
 - **NestJS**
 - **TypeORM**
 - **MySQL**
+- **CSS**
+- **React**
+- **NodeJS**
 
 <br>
 
