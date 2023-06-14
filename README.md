@@ -1,5 +1,5 @@
 # Head Hunter 🐱‍👤
-## Navigation 🧭
+ Navigation 🧭
 
 - About The Project
 - Demo
@@ -22,7 +22,10 @@ In this project, the user (HR) can create an account, log in, and search for sui
 ## Demo 🤩
 
 Here is a short gif to show how the app works:
-![](C:\Users\Admin\Desktop\HeadHunter.gif.gif)
+![app1](https://github.com/Jednookiprogramista/head-hunter-front/assets/98560465/7dd462df-bca6-405d-9a94-b4d8d6d57909)
+![app2](https://github.com/Jednookiprogramista/head-hunter-front/assets/98560465/c64714be-09f7-462b-9575-127476c7ee3b)
+
+
 
 also screenshots of the pages:
 <br>
@@ -45,7 +48,8 @@ Filter button function
 
 Candidate-CV page
 
-![](C:\Users\Admin\Desktop\Cv-candidate.gif)
+![Cv-candidate](https://github.com/Jednookiprogramista/head-hunter-front/assets/98560465/2472dd99-552c-4892-b2c1-96c0fa43a6eb)
+
 
 User-space
 
@@ -65,11 +69,11 @@ User-space
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/PaulaaGS/HeadHunter-backend.git
+   git clone https://github.com/kowalskika/HeadHunter-frontend.git
    ```
 2. Go to the project directory
    ```sh
-   cd HeadHunter-backend
+   cd HeadHunter-frontend
    ```
 3. Install NPM packages
    ```sh
@@ -78,15 +82,6 @@ User-space
 4. Start the server development
    ```js
    npm start
-   ```
-5. Start the watch mode
-   ```js
-   npm run start:dev
-   ```
-6. Start the production mode
-   ```js
-   npm run start:prod
-   ```
 
 <br>
 
